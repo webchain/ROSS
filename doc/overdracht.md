@@ -71,9 +71,14 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
   - Data: "Koffie op het werk" (€0,00) en "De ultieme gids…" (geen foto) zijn digitale producten zonder type; nakijken of die zichtbaar moeten blijven.
 
 - **Eindoverzicht voor Wim (fase 5):** Jeroen wil daarin naast de uitleg over het thema ook **alle suggesties** om de site verder te verbeteren. Die worden verzameld in `doc/suggesties-wim.md`; vul die lijst aan telkens er iets opvalt.
-- **Afspraak "Wim-klaar":** het thema moet in Wims winkel met een paar klikken werken (GitHub koppelen, bekijken, publiceren). Daarom: links naar zijn bestaande collectie-handles (`specialty-coffee-single-origins`, `specialty-coffee-blends`, `proefpakket-koffie`, `abonnementen`, `cadeau`, `koffietoestellen`), tracking in de themacode, en de Symmetry-pagina's opnieuw bouwen met dezelfde templatenamen als bij Wim. In zijn winkel blijven dan enkel de koffievelden (eenmalig) en het aanzetten van Judge.me over.
+- **Afspraak "Wim-klaar":** het thema moet in Wims winkel met een paar klikken werken (GitHub koppelen, bekijken, publiceren). Daarom: links naar zijn bestaande collectie-handles (`specialty-coffee-single-origins`, `specialty-coffee-blends`, `proefpakket-koffie`, `abonnementen`, `cadeau`, `koffietoestellen`), tracking via apps/Klantgebeurtenissen (niet in de themacode), en de Symmetry-pagina's opnieuw bouwen met dezelfde templatenamen als bij Wim. In zijn winkel blijven dan enkel de koffievelden (eenmalig) en het aanzetten van Judge.me over.
 
-**Volgende stap: fase 3**: pagina's (Ons verhaal, Workshops, Mobiele koffiebar, Zakelijk, Contact), hoofdmenu en footermenu (nu nog "Catalog"/"Contact" van Shopify), nieuwsbrief en de lege links in de homesecties invullen.
+- **Fase 3 (inrichten), stand 12/11:**
+  - Collectiehandles in de demo gelijk aan rosscoffee.be, met redirect van de oude handle: koffie→`ross-coffee`, huisblends→`specialty-coffee-blends`, single-origins→`specialty-coffee-single-origins`, proefpakketten→`proefpakket-koffie`, toestellen→`koffietoestellen`, thee→`pure-tea-white-line`, cadeaus→`cadeau`. Gecontroleerd in de winkel (200, koffietemplate op de 3 koffiecollecties).
+  - Pagina's aangemaakt (zichtbaar) met Wims handles en templates: Over ons (`over-ons`, template over-ons), Workshop (`workshop`, activiteit), Mobiele koffiebar & barista huren (`mobiele-koffiebar-barista-huren`, koffiebar), Koffie op 't werk (`koffie-op-t-werk`, zakelijk). Contact gebruikte al template contact; titel is nu h1.
+  - Hoofdmenu: Koffie, Toestellen, Pure Tea, Cadeaus, Beleef ROSS (→ workshop), Over ons, Contact. Opgeslagen.
+  - **Nog te doen:** submenu's onder Koffie (Single origins, Blends, Proefpakketten, Abonnementen) en Beleef ROSS (Workshops, Mobiele koffiebar, Koffie op 't werk). Nestelen kan enkel door te slepen (toetsenbord: spatie, pijlen, pijl rechts, spatie) en dat werkt niet als het Claude-venster verborgen is (`document.hidden` = true). Daarna footermenu, logo-check, nieuwsbrief en mobiel nalopen.
+  - Tips admin: "Opslaan" in de opslagbalk via `button` met tekst Opslaan (script) of op het scherm rond (618,26); zonder opslagbalk raak je daar "Dupliceren". Paginatemplate kiezen: `S-INTERNAL-SINGLE-PICKER-FIELD[label=Template]` → knop in shadowRoot → `S-INTERNAL-PICKER-OPTION[value=page.x]`. Menu-link: label typen, linkveld focussen, zoekterm typen, dan categorie-optie (`COLLECTION`/`PAGE`) en het resultaat met `gid` klikken.
 
 ## Wat nu te doen, in deze volgorde
 
@@ -119,4 +124,4 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
 
 ## Eerste actie in de nieuwe chat
 
-Fase 0 tot 2 zijn klaar. Doe eerst `git pull` en begin aan fase 3. Heb je de admin nodig, controleer dan of de ingebouwde browser ingelogd is in `admin.shopify.com/store/ross-demo-i7hrpkck`; zo niet, vraag Jeroen om in te loggen in de ingebouwde browser van de computer waaraan deze chat gekoppeld is.
+Fase 0 tot 2 zijn klaar, fase 3 is grotendeels klaar (zie hierboven). Doe eerst `git pull`. Heb je de admin nodig, controleer dan of de ingebouwde browser ingelogd is in `admin.shopify.com/store/ross-demo-i7hrpkck`; zo niet, vraag Jeroen om in te loggen in de ingebouwde browser van de computer waaraan deze chat gekoppeld is.

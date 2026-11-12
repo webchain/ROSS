@@ -8,7 +8,7 @@ Verzamellijst voor het eindoverzicht (fase 5). Jeroen wil dat het document voor 
 - **Koffievelden één keer invullen** (11 metafield-definities, waarden voor 20 koffies). Zonder die velden tonen koffies als gewone productpagina's; met de velden krijgen ze het kleurontwerp.
 - **Template "koffie" kiezen** bij de koffiecollecties (Single origins, Blends).
 - **Judge.me in het nieuwe thema aanzetten** (app-embed in de thema-editor). Daarna kunnen sterren en echte reviews in het ontwerp.
-- **Tracking meenemen**: Google Tag Manager (GTM-NZ8JMZ4), GA4 (G-TE52TSEVTP) en Microsoft Clarity zitten nu in de code van Symmetry en verdwijnen anders bij de wissel.
+- **Meetcodes verhuizen vóór de themawissel**: Google Tag Manager (GTM-NZ8JMZ4), GA4 (G-TE52TSEVTP) en Microsoft Clarity zitten nu in de code van Symmetry en verdwijnen bij de wissel. Niet terug in de themacode zetten, maar via de app Google & YouTube (GA4), de Microsoft Clarity-app en eventueel een pixel bij Instellingen › Klantgebeurtenissen. Dan blijven ze werken bij elke volgende themawissel en volgen ze de cookietoestemming.
 - **Eigenaarschap van de code**: de repo staat nu bij Jeroen. Overdragen naar een GitHub-account van ROSS, of na publicatie de koppeling verbreken (Shopify houdt een kopie).
 
 ## Inhoud en structuur
@@ -19,6 +19,8 @@ Verzamellijst voor het eindoverzicht (fase 5). Jeroen wil dat het document voor 
 - **Dubbele blogartikels**: o.a. "Alles over koffie KVLV Kruibeke", "ROSS op Kanaal Z", "Halloween Mercoween" en "Koffietime" staan er twee keer. Eén versie houden en de andere doorverwijzen. De lege standaardblog "News" kan weg.
 - **Collecties opruimen**: 28 collecties, waarvan enkele alleen voor de sliders van het oude thema (homepage-slider-origins, home-slider-producten-toestellen, collectie-homepagina-2).
 - **Lege pagina** "Erkend ambachtsman – handmade in Belgium" invullen of verwijderen.
+- **Kapotte link op de huidige site**: de afbeelding bij de workshops verwijst naar /collections/single-origins, die collectie bestaat niet (de echte handle is specialty-coffee-single-origins).
+- **Collectiehandles in de demo** zijn gelijkgezet met die van rosscoffee.be (ross-coffee, specialty-coffee-blends, specialty-coffee-single-origins, proefpakket-koffie, koffietoestellen, pure-tea-white-line, cadeau). Alle links in het thema werken daardoor meteen in de echte winkel.
 
 ## Productdata
 
@@ -32,6 +34,7 @@ Verzamellijst voor het eindoverzicht (fase 5). Jeroen wil dat het document voor 
 
 - **Echte abonnementen** (pauzeren, overslaan, opzeggen) met een abonnementsapp, in plaats van vooruitbetaalde pakketten van 1, 3, 6 of 12 maanden.
 - **Workshops online boeken** met een boekingsapp, in plaats van mailen of bellen.
+- **Reviews tonen (optioneel)**: Judge.me is al geïnstalleerd. Na het aanzetten van de app-embed kunnen sterren bij de koffies en een reviewblok op de homepage. In de demo bewust weggelaten: geen verzonnen reviews.
 
 ## Na te vragen / te bevestigen
 
