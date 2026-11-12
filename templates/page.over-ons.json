@@ -1,0 +1,163 @@
+{
+  "sections": {
+    "intro": {
+      "type": "ross-hero",
+      "settings": {
+        "show_stripes": true,
+        "heading": "Soms verandert één kop koffie je leven.",
+        "heading_tag": "h1",
+        "script": "Over ROSS Coffee",
+        "text": "<p>Wim en Sabrina Rosseau branden sinds 2015 specialty coffee in Melsele. Traag, op lage temperatuur, en zo lekker dat je er geen melk of suiker bij nodig hebt.</p>",
+        "button_label_1": "Shop onze koffie",
+        "button_link_1": "shopify://collections/ross-coffee",
+        "button_label_2": "",
+        "button_link_2": "",
+        "footnote": "",
+        "fallback": "ross-wim-en-sabrina-branderij.jpg",
+        "image_alt": "Wim en Sabrina met een kop koffie voor hun brander",
+        "image_position": "30% center",
+        "caption": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "zoektocht": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": false,
+        "fallback": "ross-kop-toog-branderij.jpg",
+        "image_alt": "Een zwarte ROSS-kop op de toog, met de branderij op de achtergrond",
+        "image_position": "center",
+        "script": "Waar het begon",
+        "heading": "De zoektocht naar écht lekkere koffie",
+        "text": "<p>Toen Wim op zijn 32e opnieuw ging studeren voor piloot, dronk hij liters koffie die smeekte om melk en suiker. Die zoektocht naar beter liep als een rode draad door zijn jaren als aankoper in binnen- en buitenland.</p><p>Tot een terras in Tarbes, in 2013. Een barista brandde er zijn eigen koffie, met groene bonen uit Antwerpen nota bene. Eén slok, zonder melk, zonder suiker. Zo hoort koffie te smaken.</p>",
+        "note": "",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "branderij": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": true,
+        "fallback": "ross-wim-giesen-jutezak.jpg",
+        "image_alt": "Wim schept groene bonen uit een jutezak bij de Giesen-brander",
+        "image_position": "center 30%",
+        "script": "Van garage naar branderij",
+        "heading": "Anderhalf jaar leren, dan de eerste branding.",
+        "text": "<p>De geplande hobbyruimte werd een koffiebranderij. We volgden opleidingen en leerden het vak stap voor stap, tot de eerste branding in 2015. De naam hielden we kort: ROSS, naar Rosseau.</p><p>Vandaag branden we op twee toestellen, een Probat van 12 kilo en een Giesen van 6 kilo. Wim volgt elk proces tot op de graad.</p>",
+        "note": "",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "ambacht": {
+      "type": "ross-story",
+      "settings": {
+        "fallback": "ross-wim-probat-bonen.jpg",
+        "image_alt": "Vers gebrande bonen vallen uit de Probat in de koeltrommel",
+        "image_position": "60% center",
+        "script": "Erkend ambachtsman",
+        "heading": "Traag gebrand, zonder trucjes.",
+        "text": "<p>In 2020 erkende de FOD Economie Wim officieel als ambachtsman. We branden traag en op lage temperatuur, zodat alle aroma's uit de boon loskomen. Water toevoegen doen we nooit: dat maakt de bonen zwaarder, maar kost smaak. Wij kiezen voor smaak.</p>",
+        "link_label": "",
+        "link": "",
+        "color_scheme": "scheme-3"
+      },
+      "blocks": {
+        "ambacht-0": {
+          "type": "stat",
+          "settings": {
+            "number": "2015",
+            "label": "Eerste branding"
+          }
+        },
+        "ambacht-1": {
+          "type": "stat",
+          "settings": {
+            "number": "12 + 6 kg",
+            "label": "Probat en Giesen"
+          }
+        },
+        "ambacht-2": {
+          "type": "stat",
+          "settings": {
+            "number": "2020",
+            "label": "Erkend ambachtsman"
+          }
+        }
+      },
+      "block_order": [
+        "ambacht-0",
+        "ambacht-1",
+        "ambacht-2"
+      ]
+    },
+    "boon": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": false,
+        "fallback": "ross-cupping.jpg",
+        "image_alt": "Proeven tijdens een cuppingsessie",
+        "image_position": "center",
+        "script": "Alleen het beste uit de boon",
+        "heading": "100% arabica, specialty-kwaliteit.",
+        "text": "<p>Lekkere koffie start met een fantastische groene boon. We werken uitsluitend met specialty arabica, geteeld op grote hoogte, met een smaakscore boven 80 op 100. We bewaren de bonen in een geconditioneerde ruimte en verpakken ze meteen na het branden in een hersluitbare zak met ventiel.</p>",
+        "note": "",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "eerlijk": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": true,
+        "fallback": "ross-krat-levering.jpg",
+        "image_alt": "Een kist vol verse ROSS-koffiezakjes, klaar om te leveren",
+        "image_position": "center",
+        "script": "Van boer tot kop",
+        "heading": "Eerlijk voor boer én planeet.",
+        "text": "<p>We bouwen rechtstreekse relaties op met kleine, familiale plantages die hun mensen goed behandelen en milieuvriendelijk telen, zoals die van koffieboer Quin in Honduras. Daar betalen we bewust een premium prijs voor.</p><p>Ook thuis doen we ons deel: ons dak ligt vol zonnepanelen met batterijopslag, die de branderij conditioneren en onze elektrische wagen laden.</p>",
+        "note": "",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "proef": {
+      "type": "ross-overlay",
+      "settings": {
+        "fallback": "ross-zakken-rek-winkel.jpg",
+        "image_alt": "ROSS-koffiezakken met rode en bruine labels op een houten rek",
+        "image_position": "center",
+        "script": "Proef het zelf",
+        "heading": "Kom langs, of bestel online.",
+        "text": "<p>Naast koffie vind je bij ons ook 100% organische Pure Tea en toestellen van JURA, Melitta en La Marzocco. Advies over bonen en zetmethodes krijg je er gratis bij.</p>",
+        "button_label_1": "Shop onze koffie",
+        "button_link_1": "shopify://collections/ross-coffee",
+        "button_label_2": "ROSS Academy",
+        "button_link_2": "shopify://collections/ross-academy",
+        "color_scheme": "scheme-3"
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "zoektocht",
+    "branderij",
+    "ambacht",
+    "boon",
+    "eerlijk",
+    "proef"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "sections": {
+    "intro": {
+      "type": "ross-hero",
+      "settings": {
+        "show_stripes": true,
+        "heading": "Mobiele koffiebar",
+        "heading_tag": "h1",
+        "script": "Échte koffie op jouw feest.",
+        "text": "<p>Onze barista's brengen de geur, smaak en gezelligheid van specialty coffee naar je evenement: espresso, cappuccino, flat white, Irish coffee en meer, met latte art en een warme glimlach.</p>",
+        "button_label_1": "Vraag je offerte",
+        "button_link_1": "#ContactForm",
+        "button_label_2": "",
+        "button_link_2": "",
+        "footnote": "",
+        "fallback": "ross-koffiebar-veldrit.jpg",
+        "image_alt": "De zwarte ROSS-koffiebar op een veldrit met wachtende supporters",
+        "image_position": "center",
+        "caption": "Ook bij regen en modder.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "aanbod": {
+      "type": "ross-usp",
+      "settings": {
+        "label": "Waarvoor",
+        "color_scheme": "scheme-3"
+      },
+      "blocks": {
+        "aanbod-0": {
+          "type": "usp",
+          "settings": {
+            "title": "Bedrijfsfeesten",
+            "text": "Personeelsfeest, opening, teambuilding"
+          }
+        },
+        "aanbod-1": {
+          "type": "usp",
+          "settings": {
+            "title": "Beurzen",
+            "text": "Lok bezoekers naar je stand"
+          }
+        },
+        "aanbod-2": {
+          "type": "usp",
+          "settings": {
+            "title": "Bruiloften",
+            "text": "De koffie na het diner"
+          }
+        },
+        "aanbod-3": {
+          "type": "usp",
+          "settings": {
+            "title": "Sport en events",
+            "text": "Van veldrit tot marathon"
+          }
+        }
+      },
+      "block_order": [
+        "aanbod-0",
+        "aanbod-1",
+        "aanbod-2",
+        "aanbod-3"
+      ]
+    },
+    "lekkers": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": true,
+        "fallback": "ross-kop-kaneel.jpg",
+        "image_alt": "Een kop ROSS-koffie met een kaneelstokje",
+        "image_position": "center",
+        "script": "Maak het compleet",
+        "heading": "Wafels, cake en croques, ter plekke gemaakt.",
+        "text": "<p>Naast koffie bakken we versgebakken wafels volgens eigen recept, homemade cake en cookies, of een hartige croque monsieur. Alles ter plaatse bereid.</p><p>ROSS is partner van SALINO, een symbool van kwaliteit en deskundigheid.</p>",
+        "note": "",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "offerte": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Vraag je vrijblijvende offerte",
+        "heading_size": "h2",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "aanbod",
+    "lekkers",
+    "offerte"
+  ]
+}

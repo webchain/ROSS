@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "intro": {
+      "type": "ross-hero",
+      "settings": {
+        "show_stripes": true,
+        "heading": "Workshops in de branderij",
+        "heading_tag": "h1",
+        "script": "Cuppen, branden, latte art.",
+        "text": "<p>Ontdek koffie achter de schermen van onze ambachtelijke branderij in Melsele. Van eerste kennismaking tot verdieping: met vrienden, familie of collega's.</p>",
+        "button_label_1": "Reserveer via Spotworkshops",
+        "button_link_1": "https://spotworkshops.be/nl-be/workshops?search=ross+coffee",
+        "button_label_2": "Reserveer via Maakr",
+        "button_link_2": "https://www.maakr.be/frontend/workshop.html?slug=van-boon-tot-kopje-2319bc2f&session=392",
+        "footnote": "",
+        "fallback": "ross-cupping.jpg",
+        "image_alt": "Proeven tijdens een cuppingsessie in de branderij",
+        "image_position": "center",
+        "caption": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "praktisch": {
+      "type": "ross-usp",
+      "settings": {
+        "label": "Praktische info",
+        "color_scheme": "scheme-3"
+      },
+      "blocks": {
+        "praktisch-0": {
+          "type": "usp",
+          "settings": {
+            "title": "Locatie",
+            "text": "ROSS Coffee Roastery, Melsele"
+          }
+        },
+        "praktisch-1": {
+          "type": "usp",
+          "settings": {
+            "title": "Groep",
+            "text": "6 tot 12 personen"
+          }
+        },
+        "praktisch-2": {
+          "type": "usp",
+          "settings": {
+            "title": "Duur en prijs",
+            "text": "Verschillen per workshop"
+          }
+        },
+        "praktisch-3": {
+          "type": "usp",
+          "settings": {
+            "title": "Op maat",
+            "text": "Vraag een offerte voor je groep"
+          }
+        }
+      },
+      "block_order": [
+        "praktisch-0",
+        "praktisch-1",
+        "praktisch-2",
+        "praktisch-3"
+      ]
+    },
+    "verwachten": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": true,
+        "fallback": "ross-kop-toog-branderij.jpg",
+        "image_alt": "Een zwarte ROSS-kop op de toog in de branderij",
+        "image_position": "center",
+        "script": "Wat je ontdekt",
+        "heading": "Meer dan een activiteit: een belevenis.",
+        "text": "<p>Afhankelijk van de workshop die je kiest, leer je onder meer:</p><ul><li><strong>Het brandproces</strong>: wat light, medium en dark roast betekenen voor de smaak</li><li><strong>Herkomst</strong>: hoe de streek de smaak bepaalt</li><li><strong>Cuppen als een pro</strong>: aroma's herkennen en beoordelen</li><li><strong>Melk en espresso</strong>: van perfecte extractie tot latte art</li><li><strong>Koffiecocktails</strong>: iced coffee, tonicoffee en meer</li></ul>",
+        "note": "",
+        "button_label_1": "Vraag een offerte",
+        "button_link_1": "shopify://pages/contact",
+        "button_label_2": "Geef een workshop cadeau",
+        "button_link_2": "shopify://products/cadeaubon-workshop",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "praktisch",
+    "verwachten"
+  ]
+}

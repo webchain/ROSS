@@ -8,7 +8,7 @@
         "script": "Mag. Hoeft niet.",
         "text": "<p>Wim brandt elke boon traag en op lage temperatuur in onze branderij in Melsele. Het resultaat: koffie die je gewoon puur drinkt, omdat hij zo lekker is.</p>",
         "button_label_1": "Shop onze koffie",
-        "button_link_1": "shopify://collections/koffie",
+        "button_link_1": "shopify://collections/ross-coffee",
         "button_label_2": "Proefpakket · €44,90",
         "button_link_2": "shopify://products/proefpakket-specialty-coffee-5x250g",
         "footnote": "",
@@ -68,7 +68,7 @@
         "script": "Elke regio, een eigen kleur",
         "heading": "Welke kleur drink jij?",
         "text": "<p>Op elk ROSS-label zie je meteen waar de koffie vandaan komt. Onthoud je kleur, en je vindt je favoriet zo terug: online, in de winkel en op het rek.</p>",
-        "collection_url": "shopify://collections/koffie",
+        "collection_url": "shopify://collections/ross-coffee",
         "image_alt": "Vijf ROSS-koffiezakken naast elkaar, elk met een andere labelkleur",
         "color_scheme": "scheme-1"
       },
@@ -131,7 +131,7 @@
       "type": "ross-coffee-grid",
       "settings": {
         "heading": "Deze week populair",
-        "collection": "koffie",
+        "collection": "ross-coffee",
         "limit": 4,
         "link_label": "Alle [aantal] koffies",
         "anchor": "koffie",
@@ -148,7 +148,7 @@
         "heading": "Het begon met één kop koffie op een terras in Tarbes.",
         "text": "<p>In 2013 proefde Wim in de Pyreneeën een koffie die geen melk of suiker nodig had. Gebrand met groene bonen uit Antwerpen, nota bene. Terug thuis werd de hobbyruimte een branderij, en in 2015 rolde de eerste branding uit de trommel.</p>",
         "link_label": "Lees ons verhaal",
-        "link": "",
+        "link": "shopify://pages/over-ons",
         "color_scheme": "scheme-3"
       },
       "blocks": {
@@ -194,7 +194,7 @@
         "button_label_1": "Start je abonnement",
         "button_link_1": "shopify://collections/abonnementen",
         "button_label_2": "Geef het cadeau",
-        "button_link_2": "shopify://collections/cadeaus",
+        "button_link_2": "shopify://collections/cadeau",
         "color_scheme": "scheme-1"
       }
     },
@@ -214,7 +214,7 @@
             "image_position": "center",
             "title": "Workshops in de branderij",
             "text": "Cuppen, branden, latte art. Met 6 tot 12 mensen, ideaal met vrienden of collega's.",
-            "link": ""
+            "link": "shopify://pages/workshop"
           }
         },
         "kaarten-1": {
@@ -236,7 +236,7 @@
             "image_position": "center",
             "title": "ROSS Academy",
             "text": "Sabrina's gidsen om thuis koffie te zetten zoals een barista.",
-            "link": ""
+            "link": "shopify://collections/ross-academy"
           }
         }
       },
@@ -256,9 +256,9 @@
         "heading": "Regen, modder, veldrit? Wij staan er.",
         "text": "<p>Op je bedrijfsfeest, je trouw of aan de finish.</p>",
         "button_label_1": "Boek de koffiebar",
-        "button_link_1": "",
-        "button_label_2": "ROSS & sport",
-        "button_link_2": "",
+        "button_link_1": "shopify://pages/mobiele-koffiebar-barista-huren",
+        "button_label_2": "Koffie op 't werk",
+        "button_link_2": "shopify://pages/koffie-op-t-werk",
         "color_scheme": "scheme-3"
       }
     },
@@ -284,7 +284,7 @@
           "type": "row",
           "settings": {
             "label": "Woensdag",
-            "value": "8u – 12u30"
+            "value": "9u – 12u30"
           }
         },
         "winkel-1": {
@@ -298,7 +298,7 @@
           "type": "row",
           "settings": {
             "label": "Andere dagen",
-            "value": "Na afspraak: 0477 34 08 84"
+            "value": "Op afspraak: 0477 34 08 84"
           }
         }
       },

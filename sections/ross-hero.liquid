@@ -1,14 +1,15 @@
+{%- assign heading_tag = section.settings.heading_tag | default: 'h2' -%}
 <section class="ross-hero color-{{ section.settings.color_scheme }}">
   <div class="ross-hero__text">
     {%- if section.settings.show_stripes -%}
       <div class="ross-stripes" aria-hidden="true"><span></span><span></span><span></span></div>
     {%- endif -%}
-    <h2 class="ross-hero__title">
+    <{{ heading_tag }} class="ross-hero__title">
       {{- section.settings.heading | escape -}}
       {%- if section.settings.script != blank -%}
         <span class="ross-script ross-hero__script">{{ section.settings.script | escape }}</span>
       {%- endif -%}
-    </h2>
+    </{{ heading_tag }}>
     {%- if section.settings.text != blank -%}
       <div class="ross-hero__lead rte">{{ section.settings.text }}</div>
     {%- endif -%}
@@ -47,6 +48,17 @@
   "settings": [
     { "type": "checkbox", "id": "show_stripes", "label": "Toon de drie streepjes", "default": true },
     { "type": "text", "id": "heading", "label": "Titel", "default": "Melk en suiker?" },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Soort titel",
+      "options": [
+        { "value": "h1", "label": "Paginatitel (h1)" },
+        { "value": "h2", "label": "Sectietitel (h2)" }
+      ],
+      "default": "h2",
+      "info": "Kies h1 als deze hero bovenaan een pagina staat."
+    },
     { "type": "text", "id": "script", "label": "Handschriftregel", "default": "Mag. Hoeft niet." },
     { "type": "richtext", "id": "text", "label": "Tekst", "default": "<p>Wim brandt elke boon traag en op lage temperatuur in onze branderij in Melsele. Het resultaat: koffie die je gewoon puur drinkt, omdat hij zo lekker is.</p>" },
     { "type": "text", "id": "button_label_1", "label": "Knop 1", "default": "Shop onze koffie" },

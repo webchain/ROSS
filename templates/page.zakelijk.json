@@ -1,0 +1,101 @@
+{
+  "sections": {
+    "intro": {
+      "type": "ross-hero",
+      "settings": {
+        "show_stripes": true,
+        "heading": "Koffie op 't werk",
+        "heading_tag": "h1",
+        "script": "Lekker werken begint hier.",
+        "text": "<p>Specialty coffee voor kantoren, vrije beroepen, KMO's en horeca. Zacht, zonder bitterheid, en zo lekker dat melk en suiker overbodig worden.</p>",
+        "button_label_1": "Vraag een voorstel",
+        "button_link_1": "#ContactForm",
+        "button_label_2": "Bestel een proefpakket",
+        "button_link_2": "shopify://collections/proefpakket-koffie",
+        "footnote": "",
+        "fallback": "ross-krat-levering.jpg",
+        "image_alt": "Een kist verse ROSS-koffie, klaar voor levering",
+        "image_position": "center",
+        "caption": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "troeven": {
+      "type": "ross-usp",
+      "settings": {
+        "label": "Waarom ROSS op het werk",
+        "color_scheme": "scheme-3"
+      },
+      "blocks": {
+        "troeven-0": {
+          "type": "usp",
+          "settings": {
+            "title": "Altijd vers",
+            "text": "Ambachtelijk gebrand en vers geleverd"
+          }
+        },
+        "troeven-1": {
+          "type": "usp",
+          "settings": {
+            "title": "Op maat",
+            "text": "Van smaak, stijl en budget"
+          }
+        },
+        "troeven-2": {
+          "type": "usp",
+          "settings": {
+            "title": "Eigen label",
+            "text": "Koffie onder je eigen naam kan"
+          }
+        },
+        "troeven-3": {
+          "type": "usp",
+          "settings": {
+            "title": "Geen gedoe",
+            "text": "Geen minimale afname, geen contract"
+          }
+        }
+      },
+      "block_order": [
+        "troeven-0",
+        "troeven-1",
+        "troeven-2",
+        "troeven-3"
+      ]
+    },
+    "corner": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": true,
+        "fallback": "ross-kop-toog-branderij.jpg",
+        "image_alt": "Een zwarte ROSS-kop op de toog",
+        "image_position": "center",
+        "script": "Koffiecorner of totaalbeleving?",
+        "heading": "Wij denken mee, van boon tot toestel.",
+        "text": "<p>We adviseren je bij de inrichting van je koffiehoek: op kantoor, aan de receptie, in de showroom of vergaderzaal. Ook voor horeca, als smaakvolle afsluiter van een diner.</p><p>Toestel nodig? We leveren volautomatische en halfautomatische machines van onder meer JURA, Animo, Schaerer, WMF, La Marzocco en Melitta. Liever filterkoffie? Ook dat kan.</p>",
+        "note": "",
+        "button_label_1": "Bekijk de toestellen",
+        "button_link_1": "shopify://collections/koffietoestellen",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "voorstel": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Vraag je gratis voorstel",
+        "heading_size": "h2",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "troeven",
+    "corner",
+    "voorstel"
+  ]
+}

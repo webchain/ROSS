@@ -9,28 +9,28 @@
           "type": "text",
           "settings": {
             "heading": "ROSS coffee",
-            "subtext": "<p><a href=\"mailto:info@rosscoffee.be\">info@rosscoffee.be</a><br>0477 34 08 84<br>Edmond Gorrebeeckstraat 13, 9150 Kruibeke</p>"
+            "subtext": "<p><a href=\"mailto:sabrina@rosscoffee.be\">sabrina@rosscoffee.be</a><br><a href=\"tel:+32477340884\">0477 34 08 84</a><br>Edmond Gorrebeeckstraat 13, 9150 Kruibeke</p>"
           }
         },
         "shop": {
           "type": "text",
           "settings": {
             "heading": "Shop",
-            "subtext": "<p><a href=\"/collections/koffie\">Koffie</a><br><a href=\"/collections/proefpakketten\">Proefpakketten</a><br><a href=\"/collections/abonnementen\">Abonnementen</a><br><a href=\"/collections/thee\">Pure Tea</a><br><a href=\"/collections/toestellen\">Toestellen</a></p>"
+            "subtext": "<p><a href=\"/collections/ross-coffee\">Koffie</a><br><a href=\"/collections/proefpakket-koffie\">Proefpakketten</a><br><a href=\"/collections/abonnementen\">Abonnementen</a><br><a href=\"/collections/pure-tea-white-line\">Pure Tea</a><br><a href=\"/collections/koffietoestellen\">Toestellen</a><br><a href=\"/collections/cadeau\">Cadeaus</a></p>"
           }
         },
         "ross": {
           "type": "text",
           "settings": {
             "heading": "ROSS",
-            "subtext": "<p>Ons verhaal<br>Workshops<br>Mobiele koffiebar<br>Zakelijk<br>ROSS &amp; sport</p>"
+            "subtext": "<p><a href=\"/pages/over-ons\">Ons verhaal</a><br><a href=\"/pages/workshop\">Workshops</a><br><a href=\"/pages/mobiele-koffiebar-barista-huren\">Mobiele koffiebar</a><br><a href=\"/pages/koffie-op-t-werk\">Koffie op 't werk</a><br><a href=\"/collections/ross-academy\">ROSS Academy</a></p>"
           }
         },
         "hulp": {
           "type": "text",
           "settings": {
             "heading": "Hulp",
-            "subtext": "<p>Veelgestelde vragen<br>Verzending en afhalen<br>Retourbeleid<br>Contact</p>"
+            "subtext": "<p><a href=\"/pages/faq-veelgestelde-vragen\">Veelgestelde vragen</a><br><a href=\"/pages/retourbeleid\">Retourbeleid</a><br><a href=\"/pages/contact\">Contact</a></p>"
           }
         }
       },
