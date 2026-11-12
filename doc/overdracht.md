@@ -39,15 +39,23 @@ doc/         ← Shopify negeert deze map
 
 Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git fetch origin main` voor je pusht.
 
-## Waar we staan
+## Waar we staan (bijgewerkt 12/11/2026)
 
-- **Fase 0 (voorbereiden): klaar.** Er zijn een Partner-account (Datachain BV), een ontwikkelwinkel (plan Basic) en de GitHub-repo.
-- **Fase 1 (productdata): CSV klaar.** De import telt 155 producten, 422 varianten en 663 afbeeldingsrijen. Voor 20 koffies zijn de koffievelden als metafields ingevuld. De testproducten "test" en "digital-product-2" zijn eruit, net als emoji's en oude HTML. Voor de koffies zijn de opties gelijkgetrokken naar **Toestel / Gewicht / Maling**. Bij Rwanda ontbreken herkomst en "waarom bijzonder".
-- Foto's verwijzen naar cdn.shopify.com van de huidige winkel. Shopify haalt ze bij de import zelf op.
+- **Fase 0 (voorbereiden): klaar.** Partner-account (Datachain BV), ontwikkelwinkel "Ross_demo" (`admin.shopify.com/store/ross-demo-i7hrpkck`, plan Basic) en de GitHub-repo.
+- **Fase 1 (productdata): klaar.**
+  - 11 metafield-definities aangemaakt (namespace `custom`, Storefront API-toegang aan), sleutels zoals in de tabel hieronder.
+  - Jeroen importeerde `producten-import.csv`: 155 producten. Gecontroleerd: 10/50 Mercator heeft alle 11 metafields, 12 varianten en 9 foto's; per metafield komt het aantal producten exact overeen met de CSV (koffienaam 20, oogst 18 …).
+  - Winkelvaluta staat op EUR (Jeroen paste dat aan; stond op USD).
+  - 10 automatische collecties aangemaakt: Koffie (25), Huisblends (4), Single origins (18), Proefpakketten (3), Abonnementen (5), Toestellen (75), Accessoires (13), Thee (26), Cadeaus (7: type Geschenken OF tag cadeau, als twee bronnen) en Lekkers (2). Handles volgen de titel (`koffie`, `single-origins` …).
+  - 3 producten zonder producttype vallen in geen enkele collectie: "Koffie op het werk" (`digital-product`), "De ultieme gids voor betere koffie thuis" (`digital-product-1`) en "Chemex Glass top" (`chemex-glass-top`).
+  - Bij Rwanda ontbreken herkomst en "waarom bijzonder".
+- Tip voor de admin in de ingebouwde browser: de nieuwe collectie-editor reageert slecht op gewone klikken. Wat werkte: "Voorwaarde toevoegen" via een script-klik, dan in het menu typen + pijl omlaag + Enter; waarden in de combobox kiezen met pijl omlaag + Enter; titel als laatste invullen en afsluiten met Tab.
+
+**Volgende stap: Fase 2, het thema** (stap 4 hieronder).
 
 ## Wat nu te doen, in deze volgorde
 
-1. **Metafield-definities aanmaken in de ontwikkelwinkel**, met de ingebouwde browser. Jeroen logt zelf in; jij vult nooit wachtwoorden in. Ga naar Instellingen › Aangepaste gegevens › Producten › Definitie toevoegen, met namespace `custom` en "Storefront-toegang" aan:
+1. ✅ *Klaar.* **Metafield-definities aanmaken in de ontwikkelwinkel**, met de ingebouwde browser. Jeroen logt zelf in; jij vult nooit wachtwoorden in. Ga naar Instellingen › Aangepaste gegevens › Producten › Definitie toevoegen, met namespace `custom` en "Storefront-toegang" aan:
 
    | Naam | Sleutel | Type |
    | --- | --- | --- |
@@ -64,8 +72,8 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
    | Tips | `custom.tips` | Tekst met meerdere regels |
 
    Jeroen heeft al gevraagd om de definities op te slaan. Ze aanmaken en bewaren mag dus zonder extra akkoord.
-2. **Jeroen importeert `doc/data/producten-import.csv`** via Producten › Importeren. Bestanden uploaden in de admin kan Claude niet. Controleer daarna een paar producten, bv. "10/50 Mercator": staan de metafields goed en zijn de varianten en foto's er?
-3. **Automatische collecties aanmaken** volgens `doc/data/inrichting-winkel.md`: Koffie, Huisblends, Single origins, Proefpakketten, Abonnementen, Toestellen, Accessoires, Thee, Cadeaus en Lekkers. Vraag één keer akkoord voor het opslaan van de hele reeks.
+2. ✅ *Klaar.* **Jeroen importeert `doc/data/producten-import.csv`** via Producten › Importeren. Bestanden uploaden in de admin kan Claude niet. Controleer daarna een paar producten, bv. "10/50 Mercator": staan de metafields goed en zijn de varianten en foto's er?
+3. ✅ *Klaar.* **Automatische collecties aanmaken** volgens `doc/data/inrichting-winkel.md`: Koffie, Huisblends, Single origins, Proefpakketten, Abonnementen, Toestellen, Accessoires, Thee, Cadeaus en Lekkers. Vraag één keer akkoord voor het opslaan van de hele reeks.
 4. **Fase 2: het thema.** Haal Dawn op via GitHub (`Shopify/dawn`) en zet het in de root van de repo. Bouw het in de stijl van het v3-ontwerp; zie hieronder. Laat `shopify theme check` lopen als dat lukt. Push daarna. Jeroen koppelt de repo één keer via Online Store › Thema's › Thema toevoegen › Verbinden via GitHub (webchain/ROSS, branch `main`).
 5. **Fase 3:** pagina's (Ons verhaal, Workshops, Mobiele koffiebar, Zakelijk, Contact), menu, logo en nieuwsbrief. **Fase 4:** review. **Fase 5:** wachtwoord, preview-link en een rondleiding van één pagina voor ROSS die opent met de eigendomsboodschap.
 
@@ -89,4 +97,4 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
 
 ## Eerste actie in de nieuwe chat
 
-Controleer of de ingebouwde browser ingelogd is in de admin van de ontwikkelwinkel (admin.shopify.com/store/…). Is dat zo, dan maak je stap 1 aan. Is het niet zo, dan vraag je Jeroen om in te loggen in de ingebouwde browser van de computer waaraan deze chat gekoppeld is.
+Stappen 1 tot 3 zijn klaar. Begin met stap 4 (Fase 2, het thema). Heb je de admin nodig, controleer dan of de ingebouwde browser ingelogd is in `admin.shopify.com/store/ross-demo-i7hrpkck`; zo niet, vraag Jeroen om in te loggen in de ingebouwde browser van de computer waaraan deze chat gekoppeld is.
