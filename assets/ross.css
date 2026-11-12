@@ -1200,8 +1200,8 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 }
 
 /* ---------- Dawn-productkaarten in ROSS-stijl (toestellen, thee, accessoires …) ---------- */
-.card-wrapper .card__inner {
-  background: #F4F4F4;
+.card-wrapper .card__media .media {
+  background-color: #F4F4F4;
 }
 
 .card-wrapper .card__media .media img {
