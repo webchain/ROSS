@@ -9,6 +9,7 @@ Verzamellijst voor het eindoverzicht (fase 5). Jeroen wil dat het document voor 
 - **Template "koffie" kiezen** bij de koffiecollecties (Single origins, Blends).
 - **Judge.me in het nieuwe thema aanzetten** (app-embed in de thema-editor). Daarna kunnen sterren en echte reviews in het ontwerp.
 - **Meetcodes verhuizen vóór de themawissel**: Google Tag Manager (GTM-NZ8JMZ4), GA4 (G-TE52TSEVTP) en Microsoft Clarity zitten nu in de code van Symmetry en verdwijnen bij de wissel. Niet terug in de themacode zetten, maar via de app Google & YouTube (GA4), de Microsoft Clarity-app en eventueel een pixel bij Instellingen › Klantgebeurtenissen. Dan blijven ze werken bij elke volgende themawissel en volgen ze de cookietoestemming.
+- **Menu: een nieuw hoofdmenu naast het huidige.** Menu's zitten niet in het thema maar in de winkel, en alle thema's delen ze. Het huidige menu van Wim aanpassen verandert dus meteen ook de live Symmetry-site. Daarom in zijn winkel een tweede menu maken (bv. "Hoofdmenu nieuw", 7 items zoals in de demo) en dat in de thema-editor van het nieuwe thema kiezen bij Header › Menu. De afbeelding met tekst in het huidige uitklapmenu ("menu-promotion") is een blok van Symmetry zelf; die verdwijnt in het nieuwe thema, de links niet.
 - **Eigenaarschap van de code**: de repo staat nu bij Jeroen. Overdragen naar een GitHub-account van ROSS, of na publicatie de koppeling verbreken (Shopify houdt een kopie).
 
 ## Inhoud en structuur
