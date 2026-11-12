@@ -64,7 +64,11 @@ if (!customElements.get('ross-coffee-filter')) {
           if (visible) shown += 1;
         });
         if (this.countEl) this.countEl.textContent = String(shown);
-        if (this.wordEl) this.wordEl.textContent = shown === 1 ? 'koffie' : 'koffies';
+        const filtering = this.color !== 'alle' || wanted.length > 0;
+        if (this.wordEl) {
+          if (filtering) this.wordEl.textContent = shown === 1 ? 'koffie' : 'koffies';
+          else this.wordEl.textContent = shown === 1 ? 'product' : 'producten';
+        }
         if (this.noneEl) this.noneEl.hidden = shown > 0;
       }
     }
