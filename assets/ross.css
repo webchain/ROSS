@@ -26,7 +26,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-kicker {
   margin: 0;
-  font-size: clamp(2.6rem, 2.5vw, 3.4rem);
+  font-size: clamp(2.4rem, 2.2vw, 3rem);
   line-height: 1.2;
   color: var(--ross-red);
 }
@@ -37,23 +37,23 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-h2 {
   margin: 0.4rem 0 0;
-  font-size: clamp(3.2rem, 4.2vw, 5rem);
-  line-height: 1.03;
+  font-size: clamp(2.8rem, 3.4vw, 4.4rem);
+  line-height: 1.04;
   font-weight: 800;
   letter-spacing: -0.03em;
 }
 
 .ross-h3 {
   margin: 0;
-  font-size: clamp(2.6rem, 2.8vw, 3.6rem);
-  line-height: 1.06;
+  font-size: clamp(2.4rem, 2.4vw, 3.2rem);
+  line-height: 1.08;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 .ross-lead {
-  margin-top: 1.8rem;
-  font-size: 1.8rem;
+  margin-top: 1.6rem;
+  font-size: 1.7rem;
   line-height: 1.6;
 }
 
@@ -85,7 +85,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .ross-link {
   display: inline-block;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: rgb(var(--color-foreground));
@@ -111,11 +111,11 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .button,
 .shopify-payment-button__button--unbranded {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  min-height: 5.6rem;
-  padding: 0 3rem;
+  min-height: 5.2rem;
+  padding: 0 2.8rem;
 }
 
 .button--secondary {
@@ -125,7 +125,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 /* ---------- Header ---------- */
 .header__menu-item,
 .header__active-menu-item {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -138,13 +138,13 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 }
 
 .announcement-bar__message {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
 
 .color-scheme-4 .announcement-bar__message {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -172,12 +172,12 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .ross-hero {
   display: flex;
   flex-wrap: wrap;
-  min-height: 68rem;
+  min-height: 60rem;
 }
 
 .ross-hero__text {
   flex: 1 1 52rem;
-  padding: 8rem 5.6rem 6.4rem max(3.2rem, calc((100% - var(--page-width)) / 2 + 3.2rem));
+  padding: 6.4rem 4.8rem 5.6rem max(3.2rem, calc((100% - var(--page-width)) / 2 + 3.2rem));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,7 +186,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .ross-hero__title {
   margin: 0;
   font-weight: 800;
-  font-size: clamp(4.8rem, 6vw, 7.6rem);
+  font-size: clamp(4.2rem, 5vw, 6.6rem);
   line-height: 0.98;
   letter-spacing: -0.035em;
 }
@@ -194,15 +194,15 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .ross-hero__script {
   display: block;
   margin-top: 0.8rem;
-  font-size: clamp(5.6rem, 5.6vw, 8.8rem);
+  font-size: clamp(5rem, 5vw, 7.6rem);
   line-height: 1;
   color: var(--ross-red);
 }
 
 .ross-hero__lead {
-  margin-top: 2.8rem;
-  max-width: 47rem;
-  font-size: 1.9rem;
+  margin-top: 2.4rem;
+  max-width: 46rem;
+  font-size: 1.8rem;
   color: #333333;
 }
 
@@ -217,7 +217,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .ross-hero__media {
   flex: 1 1 56rem;
   position: relative;
-  min-height: 52rem;
+  min-height: 46rem;
   background: var(--ross-black);
 }
 
@@ -267,7 +267,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .ross-legend,
 .ross-cards,
 .ross-coffee-grid {
-  padding-top: 10.4rem;
+  padding-top: 8.8rem;
 }
 
 .ross-split__inner {
@@ -293,7 +293,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-split__img {
   width: 100%;
-  height: 46rem;
+  height: 42rem;
   object-fit: cover;
   display: block;
 }
@@ -445,7 +445,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .ross-coffee-card__media img,
 .ross-coffee-card__placeholder {
   width: 100%;
-  height: 28rem;
+  height: 26rem;
   object-fit: contain;
   display: block;
 }
@@ -467,14 +467,14 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-coffee-card__name {
   margin: 0;
-  font-size: 3.4rem;
+  font-size: 3rem;
   line-height: 1.1;
   color: inherit;
 }
 
 .ross-coffee-card__nr {
   font-weight: 800;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
@@ -530,14 +530,14 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 /* ---------- Verhaal ---------- */
 .ross-story {
-  margin-top: 10.4rem;
+  margin-top: 8.8rem;
   display: flex;
   flex-wrap: wrap;
 }
 
 .ross-story__media {
   flex: 1 1 56rem;
-  min-height: 56rem;
+  min-height: 50rem;
   position: relative;
 }
 
@@ -551,13 +551,13 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-story__text {
   flex: 1 1 48rem;
-  padding: 8rem 5.6rem;
+  padding: 6.4rem 4.8rem;
   max-width: 72rem;
 }
 
 .ross-story .ross-h2 {
-  font-size: clamp(3rem, 3.8vw, 4.6rem);
-  line-height: 1.05;
+  font-size: clamp(2.8rem, 3.2vw, 4rem);
+  line-height: 1.06;
 }
 
 .ross-stats {
@@ -571,7 +571,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-stats strong {
   display: block;
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
 }
@@ -605,13 +605,13 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-cards__img {
   width: 100%;
-  height: 34rem;
+  height: 30rem;
   object-fit: cover;
   display: block;
 }
 
 .ross-cards__card strong {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -626,14 +626,14 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 /* ---------- Foto met kader (koffiebar) ---------- */
 .ross-overlay {
-  margin-top: 10.4rem;
+  margin-top: 8.8rem;
   position: relative;
   background: var(--ross-black);
 }
 
 .ross-overlay__img {
   width: 100%;
-  height: 62rem;
+  height: 56rem;
   object-fit: cover;
   display: block;
 }
@@ -642,8 +642,8 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
   position: absolute;
   right: max(3.2rem, calc((100% - var(--page-width)) / 2 + 3.2rem));
   bottom: 4rem;
-  padding: 3.6rem 4rem;
-  max-width: 48rem;
+  padding: 3.2rem 3.6rem;
+  max-width: 46rem;
 }
 
 .ross-overlay .ross-buttons {
@@ -652,12 +652,12 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 /* ---------- Nieuwsbrief ---------- */
 .ross-newsletter {
-  margin-top: 10.4rem;
+  margin-top: 8.8rem;
 }
 
 .ross-newsletter__inner {
-  padding-top: 6.4rem;
-  padding-bottom: 6.4rem;
+  padding-top: 5.6rem;
+  padding-bottom: 5.6rem;
   display: flex;
   flex-wrap: wrap;
   gap: 3.2rem;
@@ -670,7 +670,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 }
 
 .ross-newsletter__text .ross-h2 {
-  font-size: clamp(3rem, 3.6vw, 4.4rem);
+  font-size: clamp(2.8rem, 3vw, 3.8rem);
 }
 
 .ross-newsletter__text .rte {
@@ -736,6 +736,10 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 /* ---------- Mobiel ---------- */
 @media screen and (max-width: 749px) {
+  body {
+    font-size: 1.6rem;
+  }
+
   .ross-hero {
     min-height: 0;
   }
@@ -809,7 +813,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 }
 
 .ross-coll__head {
-  padding-top: 5.6rem;
+  padding-top: 4.8rem;
   display: flex;
   flex-wrap: wrap;
   gap: 3.2rem;
@@ -837,7 +841,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-coll__title {
   margin: 0;
-  font-size: clamp(4.4rem, 5.4vw, 6.4rem);
+  font-size: clamp(4rem, 4.6vw, 5.6rem);
   line-height: 1;
   letter-spacing: -0.035em;
   font-weight: 800;
@@ -1018,7 +1022,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-ptitle__name {
   margin: 0;
-  font-size: clamp(5.6rem, 7vw, 9.2rem);
+  font-size: clamp(5rem, 6vw, 8rem);
   line-height: 0.95;
   color: var(--ross-card-bg, var(--ross-black));
   word-break: break-word;
@@ -1036,7 +1040,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 .ross-ptitle__nr {
   font-weight: 800;
-  font-size: clamp(4.4rem, 5vw, 6.4rem);
+  font-size: clamp(4rem, 4.4vw, 5.6rem);
   line-height: 1;
   letter-spacing: -0.03em;
 }
@@ -1073,8 +1077,8 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 }
 
 .ross-pintro {
-  margin: 1.8rem 0 0;
-  font-size: 1.8rem;
+  margin: 1.6rem 0 0;
+  font-size: 1.7rem;
   line-height: 1.55;
   color: #333333;
 }
@@ -1109,7 +1113,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 
 /* ---------- Alles over de koffie ---------- */
 .ross-details {
-  padding-top: 7.2rem;
+  padding-top: 6.4rem;
 }
 
 .ross-details__inner {
@@ -1179,7 +1183,7 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
 .ross-details__tiptext {
   margin: 0.4rem 0 0;
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.3;
 }
 
