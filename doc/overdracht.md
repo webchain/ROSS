@@ -34,6 +34,7 @@ doc/         ← Shopify negeert deze map
   data/koffievelden.csv
   data/rapport.md
   data/inrichting-winkel.md (metafields en collecties)
+  design/                 (broncode van de v3-artboards + koppeling blob-id → projectfoto)
 ```
 
 Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git fetch origin main` voor je pusht.

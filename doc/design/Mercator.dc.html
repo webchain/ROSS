@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>ROSS coffee – productpagina Mercator</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Yellowtail&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#111111}a:hover{color:#D3302B}
+img{display:block}
+</style>
+</helmet>
+<div style="font-family: Montserrat, sans-serif; color: #111111; background: #FFFFFF; font-size: 17px; line-height: 1.6; padding-bottom: 96px">
+
+<div style="background: #D3302B; color: #FFFFFF; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; padding: 5px 16px">Concept · ontwerpvoorstel, geen echte webshop</div>
+<div style="background: #111111; color: #FFFFFF; font-size: 13px; font-weight: 500; text-align: center; padding: 9px 16px; border-bottom: 1px solid #2A2A2A">Gratis verzending vanaf €75 in België en Nederland · Afhalen in Kruibeke of Melsele</div>
+<header style="background: #000000">
+<div style="max-width: 1320px; margin: 0 auto; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 40px">
+<a href="Home.dc.html" aria-label="ROSS, naar de homepage"><img src="/_blob/8ba7155b20b1727261c177164a0c59a8" alt="ROSS Specialty Coffee Roastery" style="height: 58px; width: auto"></a>
+<nav aria-label="Hoofdmenu" style="display: flex; flex-wrap: wrap; gap: 8px 30px; flex: 1 1 520px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase">
+<a href="Koffie.dc.html" style="color: #F4C400; text-decoration: none">Koffie</a>
+<a href="Abo.dc.html" style="color: #FFFFFF; text-decoration: none">Abonnement</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Workshops</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Koffiebar</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Zakelijk</a>
+<a href="Home.dc.html" style="color: #FFFFFF; text-decoration: none">Ons verhaal</a>
+</nav>
+<button type="button" aria-label="Winkelmand, 0 producten" style="height: 44px; padding: 0 16px; border: 1.5px solid #FFFFFF; background: transparent; color: #FFFFFF; display: flex; align-items: center; gap: 8px; cursor: pointer; font: 700 13px Montserrat, sans-serif"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1.2 12H6.2z"></path><path d="M9 8V6a3 3 0 016 0v2"></path></svg>0</button>
+</div>
+</header>
+
+<section style="display: flex; flex-wrap: wrap">
+<div style="flex: 1 1 560px; background: #7B4B2A; display: flex; align-items: center; justify-content: center; padding: 48px 32px; min-height: 640px; position: relative">
+<img src="/_blob/3658e7675127711390743883ba4810ed" alt="Koffiezak Mercator 250 g met bruin label" style="width: 100%; max-width: 560px; height: auto">
+<span style="position: absolute; left: 32px; top: 28px; color: #FFFFFF; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase">Huisblend · bruin label</span>
+</div>
+<div style="flex: 1 1 520px; padding: 48px max(32px, calc((100% - 1320px) / 2 + 32px)) 48px 56px; box-sizing: border-box">
+<p style="margin: 0 0 18px; font-size: 13px; color: #555555"><a href="Home.dc.html">Home</a> / <a href="Koffie.dc.html">Koffie</a> / Mercator</p>
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px">
+<h1 style="margin: 0; font-family: Yellowtail, cursive; font-weight: 400; font-size: 92px; line-height: 0.95; color: #7B4B2A">Mercator</h1>
+<span aria-label="{{nrLabel}}" style="font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -0.03em">{{nr}}</span>
+</div>
+<p style="margin: 10px 0 0; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase">Brazilië · Guatemala · Ethiopië</p>
+<p style="margin: 6px 0 0; font-size: 14px"><a href="#reviews" style="text-decoration: none"><span style="color: #E0A100; letter-spacing: 2px">★★★★★</span> 5,0 · 6 reviews</a></p>
+<p style="margin: 18px 0 0; font-size: 18px; color: #333333">Onze huisblend, en de lieveling van bijna iedereen. Gebalanceerd en zacht, met hazelnoot, een lichte zoetheid en pure chocolade. Puur lekker, en met melk net zo goed.</p>
+
+<div style="margin-top: 28px; display: flex; flex-direction: column; gap: 20px">
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="3">
+<fieldset style="border: 0; margin: 0; padding: 0">
+<legend style="padding: 0; margin-bottom: 10px; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase">{{g.label}}</legend>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{g.options}}" as="o" hint-placeholder-count="2">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="min-height: 48px; padding: 0 20px; border: 2px solid #111111; background: {{o.bg}}; color: {{o.fg}}; font: 700 15px Montserrat, sans-serif; cursor: pointer">{{o.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+</sc-for>
+</div>
+
+<div style="margin-top: 26px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<button type="button" onClick="{{pickOnce}}" aria-pressed="{{oncePressed}}" style="text-align: left; padding: 16px 18px; border: 2px solid {{onceBorder}}; background: #FFFFFF; font: 15px Montserrat, sans-serif; color: #111111; cursor: pointer"><strong style="display: block">Eenmalig</strong><span style="font-size: 20px; font-weight: 800">{{priceOnce}}</span></button>
+<button type="button" onClick="{{pickSub}}" aria-pressed="{{subPressed}}" style="text-align: left; padding: 16px 18px; border: 2px solid {{subBorder}}; background: #FFFFFF; font: 15px Montserrat, sans-serif; color: #111111; cursor: pointer; position: relative"><strong style="display: block">Abonnement</strong><span style="font-size: 20px; font-weight: 800">[PRIJS]</span><span style="position: absolute; top: -12px; right: 10px; background: #F4C400; color: #111111; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; padding: 3px 8px">[X]% KORTING</span></button>
+</div>
+<sc-if value="{{isSub}}" hint-placeholder-val="{{ false }}">
+<div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<span style="font-size: 14px; font-weight: 700; margin-right: 4px">Levering</span>
+<sc-for list="{{freqs}}" as="f" hint-placeholder-count="3">
+<button type="button" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" style="min-height: 44px; padding: 0 16px; border: 2px solid #111111; background: {{f.bg}}; color: {{f.fg}}; font: 700 14px Montserrat, sans-serif; cursor: pointer">{{f.label}}</button>
+</sc-for>
+</div>
+</sc-if>
+<button type="button" style="margin-top: 20px; width: 100%; min-height: 60px; border: 0; background: #111111; color: #FFFFFF; font: 800 15px Montserrat, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer">{{cta}}</button>
+<p style="margin: 14px 0 0; font-size: 14px; color: #444444">Vers gebrand deze week · Vrijdag in je brievenbus · Afhalen in Kruibeke of Melsele</p>
+</div>
+</section>
+
+<section style="max-width: 1320px; margin: 0 auto; padding: 88px 32px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px">
+<div>
+<h2 style="margin: 0 0 20px; font-weight: 800; font-size: 28px; letter-spacing: -0.02em">Smaak</h2>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<sc-for list="{{meter}}" as="m" hint-placeholder-count="4">
+<div>
+<div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px"><strong>{{m.label}}</strong><span style="color: #444444">{{m.text}}</span></div>
+<div role="img" aria-label="{{m.aria}}" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px">
+<sc-for list="{{m.bars}}" as="x" hint-placeholder-count="5"><span style="height: 12px; background: {{x.bg}}"></span></sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<p style="margin: 14px 0 0; font-size: 13px; color: #555555">Scores zijn een inschatting, te bevestigen door Wim.</p>
+</div>
+<div>
+<h2 style="margin: 0 0 20px; font-weight: 800; font-size: 28px; letter-spacing: -0.02em">Wat zit erin</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 10px 24px; font-size: 15px">
+<dt style="font-weight: 700">Herkomst</dt><dd style="margin: 0">Brazilië, Guatemala, Ethiopië</dd>
+<dt style="font-weight: 700">Soort</dt><dd style="margin: 0">100% arabica, cupscore 80+</dd>
+<dt style="font-weight: 700">Verwerking</dt><dd style="margin: 0">Natural en washed</dd>
+<dt style="font-weight: 700">Ideaal voor</dt><dd style="margin: 0">Espresso, cappuccino, moka, volautomaat</dd>
+</dl>
+</div>
+<div>
+<h2 style="margin: 0 0 20px; font-weight: 800; font-size: 28px; letter-spacing: -0.02em">Waarom Mercator?</h2>
+<p style="margin: 0; color: #333333">Vernoemd naar cartograaf Gerardus Mercator, geboren in Rupelmonde, op een boogscheut van onze winkel. Net als zijn kaarten brengt deze blend drie werelden samen.</p>
+</div>
+</section>
+
+<section style="max-width: 1320px; margin: 88px auto 0; padding: 0 32px">
+<div style="display: flex; flex-wrap: wrap; background: #111111; color: #FFFFFF">
+<img src="/_blob/17c0ebdd84a59f9f87203bcfd258cdf8" alt="Een espresso in een zwarte ROSS-kop met kaneelstokjes en bonen" style="flex: 1 1 520px; min-width: 0; width: 100%; height: 380px; object-fit: cover">
+<div style="flex: 1 1 420px; padding: 44px 48px">
+<p style="margin: 0; font-family: Yellowtail, cursive; font-size: 32px; color: #F4C400">Zetadvies van Sabrina</p>
+<h2 style="margin: 2px 0 0; font-weight: 800; font-size: 32px; line-height: 1.1">De perfecte espresso met Mercator</h2>
+<ol style="margin: 18px 0 0; padding-left: 20px; color: #D8D8D8; display: flex; flex-direction: column; gap: 6px">
+<li>18 gram fijngemalen koffie</li>
+<li>Water van 92 à 93 °C</li>
+<li>25 à 30 seconden voor een dubbele shot</li>
+</ol>
+<p style="margin: 14px 0 0; font-size: 13px; color: #9E9E9E">Waarden ter illustratie, te bevestigen door ROSS.</p>
+</div>
+</div>
+</section>
+
+<section id="reviews" style="max-width: 1320px; margin: 0 auto; padding: 88px 32px 0">
+<h2 style="margin: 0 0 24px; font-weight: 800; font-size: 34px; letter-spacing: -0.02em">Wat klanten zeggen <span style="font-size: 18px; color: #555555; font-weight: 600">★ 5,0 · 6 reviews</span></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
+<figure style="margin: 0; border-top: 3px solid #7B4B2A; padding-top: 16px"><blockquote style="margin: 0; font-size: 20px; font-weight: 700">“Perfect als cappuccino alsook gewone koffie.”</blockquote><figcaption style="margin-top: 8px; font-size: 14px; color: #555555">Jolien</figcaption></figure>
+<figure style="margin: 0; border-top: 3px solid #7B4B2A; padding-top: 16px"><blockquote style="margin: 0; font-size: 20px; font-weight: 700">“Uitgesproken smaak met een hint van chocolade.”</blockquote><figcaption style="margin-top: 8px; font-size: 14px; color: #555555">Claudia</figcaption></figure>
+<figure style="margin: 0; border-top: 3px solid #7B4B2A; padding-top: 16px"><blockquote style="margin: 0; font-size: 20px; font-weight: 700">“Dit is de beste koffie ooit.”</blockquote><figcaption style="margin-top: 8px; font-size: 14px; color: #555555">Patrick C.</figcaption></figure>
+</div>
+</section>
+
+<section style="max-width: 1320px; margin: 0 auto; padding: 88px 32px 0">
+<h2 style="margin: 0 0 24px; font-weight: 800; font-size: 34px; letter-spacing: -0.02em">Probeer ook eens</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<a href="Koffie.dc.html" style="text-decoration: none; background: #7B4B2A; color: #FFFFFF; display: flex; align-items: center; gap: 14px; padding: 14px 18px"><img src="/_blob/dd35620cae1cc63093b577c286829756" alt="" style="width: 110px; height: 110px; object-fit: contain"><span><span style="display: block; font-family: Yellowtail, cursive; font-size: 30px; line-height: 1.1">Reynaert</span><span style="font-size: 14px">Voller en zoeter · vanaf €9,90</span></span></a>
+<a href="Koffie.dc.html" style="text-decoration: none; background: #D3302B; color: #FFFFFF; display: flex; align-items: center; gap: 14px; padding: 14px 18px"><img src="/_blob/ec332df8a22c61d3816d11266a8cf4ff" alt="" style="width: 110px; height: 110px; object-fit: contain"><span><span style="display: block; font-family: Yellowtail, cursive; font-size: 30px; line-height: 1.1">Guatemala</span><span style="font-size: 14px">Meer chocolade · vanaf €11,20</span></span></a>
+<a href="Koffie.dc.html" style="text-decoration: none; background: #F07D1F; color: #111111; display: flex; align-items: center; gap: 14px; padding: 14px 18px"><img src="/_blob/e72ef8ffaf99b40f4504c57618294ace" alt="" style="width: 110px; height: 110px; object-fit: contain"><span><span style="display: block; font-family: Yellowtail, cursive; font-size: 30px; line-height: 1.1">Kenya</span><span style="font-size: 14px">Fris en fruitig · vanaf €10,20</span></span></a>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { type: 'Espresso', size: '250 g', grind: 'Bonen', mode: 'once', freq: 'Om de 2 weken' }; }
+  renderVals() {
+    var self = this, s = this.state;
+    var prices = { '250 g': 10.90, '1 kg': 29.90, '4×1 kg': 113.62, '8×1 kg': 215.28 };
+    function eur(n) { return '€' + n.toFixed(2).replace('.', ','); }
+    function opt(field, label) {
+      var on = s[field] === label;
+      return { label: label, pressed: on ? 'true' : 'false', bg: on ? '#111111' : '#FFFFFF', fg: on ? '#FFFFFF' : '#111111', pick: function () { var u = {}; u[field] = label; if (field === 'size' && label.indexOf('×') > -1) { u.grind = 'Bonen'; } self.setState(u); } };
+    }
+    var bulk = s.size.indexOf('×') > -1;
+    var groups = [
+      { label: 'Voor welk toestel', options: [opt('type', 'Espresso'), opt('type', 'Filter')] },
+      { label: 'Hoeveel', options: ['250 g', '1 kg', '4×1 kg', '8×1 kg'].map(function (x) { return opt('size', x); }) },
+      { label: bulk ? 'Grote verpakkingen enkel in bonen' : 'Bonen of gemalen', options: bulk ? [opt('grind', 'Bonen')] : [opt('grind', 'Bonen'), opt('grind', 'Gemalen')] }
+    ];
+    var isSub = s.mode === 'sub';
+    var p = prices[s.size];
+    function bars(n) { var b = []; for (var i = 0; i < 5; i++) { b.push({ bg: i < n ? '#7B4B2A' : '#E6E6E6' }); } return b; }
+    var meter = [['Body', 'Medium', 3], ['Zuurtegraad', 'Laag', 2], ['Zoetheid', 'Medium', 3], ['Branding', 'Medium', 3]].map(function (m) { return { label: m[0], text: m[1], aria: m[0] + ': ' + m[2] + ' op 5', bars: bars(m[2]) }; });
+    return {
+      groups: groups, meter: meter, isSub: isSub,
+      nr: s.type === 'Espresso' ? '50' : '10',
+      nrLabel: 'Nummer ' + (s.type === 'Espresso' ? '50, espresso' : '10, filter'),
+      freqs: ['Elke week', 'Om de 2 weken', 'Elke 4 weken'].map(function (x) { return opt('freq', x); }),
+      priceOnce: eur(p),
+      oncePressed: isSub ? 'false' : 'true', subPressed: isSub ? 'true' : 'false',
+      onceBorder: isSub ? '#CFCFCF' : '#111111', subBorder: isSub ? '#111111' : '#CFCFCF',
+      pickOnce: function () { self.setState({ mode: 'once' }); },
+      pickSub: function () { self.setState({ mode: 'sub' }); },
+      cta: isSub ? 'Start abonnement · ' + s.freq.toLowerCase() : 'In mandje · ' + eur(p)
+    };
+  }
+}
+</script>
+</body>
+</html>

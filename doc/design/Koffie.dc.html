@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>ROSS coffee – collectie koffie</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Yellowtail&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#111111}a:hover{color:#D3302B}
+img{display:block}
+</style>
+</helmet>
+<div style="font-family: Montserrat, sans-serif; color: #111111; background: #FFFFFF; font-size: 17px; line-height: 1.6; padding-bottom: 96px">
+
+<div style="background: #D3302B; color: #FFFFFF; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-align: center; padding: 5px 16px">Concept · ontwerpvoorstel, geen echte webshop</div>
+<div style="background: #111111; color: #FFFFFF; font-size: 13px; font-weight: 500; text-align: center; padding: 9px 16px; border-bottom: 1px solid #2A2A2A">Gratis verzending vanaf €75 in België en Nederland · Afhalen in Kruibeke of Melsele</div>
+<header style="background: #000000">
+<div style="max-width: 1320px; margin: 0 auto; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 40px">
+<a href="Home.dc.html" aria-label="ROSS, naar de homepage"><img src="/_blob/8ba7155b20b1727261c177164a0c59a8" alt="ROSS Specialty Coffee Roastery" style="height: 58px; width: auto"></a>
+<nav aria-label="Hoofdmenu" style="display: flex; flex-wrap: wrap; gap: 8px 30px; flex: 1 1 520px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase">
+<a href="Koffie.dc.html" aria-current="page" style="color: #F4C400; text-decoration: none">Koffie</a>
+<a href="Abo.dc.html" style="color: #FFFFFF; text-decoration: none">Abonnement</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Workshops</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Koffiebar</a>
+<a href="#" style="color: #FFFFFF; text-decoration: none">Zakelijk</a>
+<a href="Home.dc.html" style="color: #FFFFFF; text-decoration: none">Ons verhaal</a>
+</nav>
+<button type="button" aria-label="Winkelmand, 0 producten" style="height: 44px; padding: 0 16px; border: 1.5px solid #FFFFFF; background: transparent; color: #FFFFFF; display: flex; align-items: center; gap: 8px; cursor: pointer; font: 700 13px Montserrat, sans-serif"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8h14l-1.2 12H6.2z"></path><path d="M9 8V6a3 3 0 016 0v2"></path></svg>0</button>
+</div>
+</header>
+
+<section style="max-width: 1320px; margin: 0 auto; padding: 56px 32px 0; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: space-between">
+<div style="flex: 1 1 560px">
+<p style="margin: 0 0 8px; font-size: 13px; color: #555555"><a href="Home.dc.html">Home</a> / Koffie</p>
+<h1 style="margin: 0; font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -0.035em">Onze koffie</h1>
+<p style="margin: 16px 0 0; font-size: 18px; color: #333333; max-width: 620px">Twee huisblends en een wisselende selectie single origins. Allemaal 100% arabica, traag gebrand, en elk met een eigen nummer: het eerste voor filter, het tweede voor espresso.</p>
+</div>
+<a href="#" style="flex: 0 1 360px; display: flex; align-items: center; gap: 16px; text-decoration: none; border: 2px solid #111111; padding: 12px 16px">
+<img src="/_blob/81cd7a904903e7a3a4f1a06fb7b37f9d" alt="" style="width: 96px; height: 96px; object-fit: contain">
+<span><strong style="display: block; font-size: 16px">Twijfel je? Proef ze alle vijf.</strong><span style="font-size: 14px; color: #444444">Proefpakket 5×250 g · €44,90</span></span>
+</a>
+</section>
+
+<section aria-label="Filter op kleur" style="max-width: 1320px; margin: 0 auto; padding: 36px 32px 0">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="6">
+<button type="button" onClick="{{c.pick}}" aria-pressed="{{c.pressed}}" style="min-height: 46px; padding: 0 18px; border: 2px solid #111111; background: {{c.bg}}; color: {{c.fg}}; font: 700 14px Montserrat, sans-serif; cursor: pointer; display: inline-flex; align-items: center; gap: 10px"><span aria-hidden="true" style="width: 16px; height: 16px; background: {{c.color}}; outline: 1px solid {{c.ring}}"></span>{{c.label}}</button>
+</sc-for>
+</div>
+<div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between; border-top: 2px solid #111111; padding: 12px 0; font-size: 14px">
+<div style="display: flex; flex-wrap: wrap; gap: 6px 22px">
+<label style="display: flex; align-items: center; gap: 8px; min-height: 36px"><input type="checkbox"> Voor espresso</label>
+<label style="display: flex; align-items: center; gap: 8px; min-height: 36px"><input type="checkbox"> Voor filter</label>
+<label style="display: flex; align-items: center; gap: 8px; min-height: 36px"><input type="checkbox"> Ook gemalen</label>
+<label style="display: flex; align-items: center; gap: 8px; min-height: 36px"><input type="checkbox"> Cafeïnevrij</label>
+</div>
+<span style="color: #444444"><strong style="color: #111111">{{count}}</strong> {{countWord}} · sorteer op <strong>populair</strong></span>
+</div>
+</section>
+
+<section style="max-width: 1320px; margin: 0 auto; padding: 24px 32px 0">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px">
+<sc-for list="{{items}}" as="b" hint-placeholder-count="6">
+<article style="background: {{b.bg}}; color: {{b.fg}}; display: flex; flex-direction: column">
+<a href="Mercator.dc.html" style="display: block; padding: 18px 18px 0"><img src="{{b.img}}" alt="{{b.alt}}" style="width: 100%; height: 300px; object-fit: contain"></a>
+<div style="padding: 6px 22px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px">
+<h2 style="margin: 0; font-family: Yellowtail, cursive; font-weight: 400; font-size: 36px; line-height: 1.1"><a href="Mercator.dc.html" style="color: {{b.fg}}; text-decoration: none">{{b.name}}</a></h2>
+<span style="font-weight: 800; font-size: 26px">{{b.nr}}</span>
+</div>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase">{{b.origin}}</span>
+<span style="font-size: 15px">{{b.notes}}</span>
+<div style="margin-top: auto; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px">
+<span style="font-weight: 700">vanaf {{b.price}}</span>
+<button type="button" aria-label="{{b.addLabel}}" style="min-height: 44px; padding: 0 18px; border: 0; background: #FFFFFF; color: #111111; font: 700 13px Montserrat, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer">In mandje</button>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+<p style="margin: 18px 0 0; font-size: 13px; color: #555555">Concept toont 7 van de 17 koffies; de andere volgen hetzelfde patroon met hun eigen packshot.</p>
+</section>
+
+<section style="max-width: 1320px; margin: 72px auto 0; padding: 0 32px">
+<div style="background: #111111; color: #FFFFFF; display: flex; flex-wrap: wrap; align-items: center">
+<img src="/_blob/ac96696c6a46be54de68c2469aaab51e" alt="Proeven tijdens een cuppingsessie" style="flex: 1 1 420px; min-width: 0; width: 100%; height: 320px; object-fit: cover">
+<div style="flex: 1 1 420px; padding: 40px 44px">
+<p style="margin: 0; font-family: Yellowtail, cursive; font-size: 32px; color: #F4C400">Nog steeds geen keuze?</p>
+<h2 style="margin: 2px 0 0; font-weight: 800; font-size: 34px; line-height: 1.08; letter-spacing: -0.02em">Vier vragen, en wij zeggen welke kleur bij je past.</h2>
+<a href="#" style="display: inline-block; margin-top: 22px; background: #F4C400; color: #111111; text-decoration: none; padding: 16px 24px; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase">Doe de koffiequiz</a>
+</div>
+</div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2200}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { color: 'alle' }; }
+  renderVals() {
+    var self = this;
+    var C = {
+      bruin: { label: 'Bruin · huisblends', color: '#7B4B2A', fg: '#FFFFFF' },
+      oranje: { label: 'Oranje · Afrika', color: '#F07D1F', fg: '#111111' },
+      rood: { label: 'Rood · Midden-Amerika', color: '#D3302B', fg: '#FFFFFF' },
+      paars: { label: 'Paars · Zuid-Amerika', color: '#B22A6E', fg: '#FFFFFF' },
+      geel: { label: 'Geel · Azië', color: '#CDAA21', fg: '#111111' }
+    };
+    var all = [
+      ['10/50', 'Mercator', 'bruin', 'Brazilië · Guatemala · Ethiopië', 'Gebalanceerd, hazelnoot, licht zoet, pure chocolade', '€10,90', '3658e7675127711390743883ba4810ed'],
+      ['20/60', 'Reynaert', 'bruin', 'Peru · Honduras', 'Volle smaak, zoet, hint van chocolade', '€9,90', 'dd35620cae1cc63093b577c286829756'],
+      ['11/51', 'Ethiopia', 'oranje', 'Yirgacheffe', 'Frisse zuren, lichte body, meloen, citrus, rozenbottel', '€10,90', 'e25d9f733579d1f6f718a467a4165136'],
+      ['12/52', 'Kenya', 'oranje', 'AA+ washed', 'Appel, boter, vanille', '€10,20', 'e72ef8ffaf99b40f4504c57618294ace'],
+      ['13/53', 'Guatemala', 'rood', 'Huehuetenango SHB', 'Pure chocolade, medium body, milde zuren', '€11,20', 'ec332df8a22c61d3816d11266a8cf4ff'],
+      ['21/61', 'Colombia', 'paars', 'Supremo', 'Vol, zoet en fruitig', '€8,90', '571df04526b43b9622b1801872be53ed'],
+      ['33/73', 'Indonesia', 'geel', 'Semi washed', 'Krachtig, volle body, zoet', '€9,50', 'e38b7d86119e15e9ef3ba0e500515903']
+    ].map(function (a) {
+      var c = C[a[2]];
+      return { nr: a[0], name: a[1], key: a[2], origin: a[3], notes: a[4], price: a[5], img: '/_blob/' + a[6], alt: 'Koffiezak ' + a[1] + ' ' + a[3], bg: c.color, fg: c.fg, addLabel: a[1] + ' in winkelmand' };
+    });
+    var sel = this.state.color;
+    var items = sel === 'alle' ? all : all.filter(function (b) { return b.key === sel; });
+    var keys = ['alle', 'bruin', 'oranje', 'rood', 'paars', 'geel'];
+    var chips = keys.map(function (k) {
+      var on = k === sel;
+      var c = k === 'alle' ? { label: 'Alle kleuren', color: '#FFFFFF' } : C[k];
+      return { label: c.label, color: c.color, ring: k === 'alle' ? '#111111' : c.color, pressed: on ? 'true' : 'false', bg: on ? '#111111' : '#FFFFFF', fg: on ? '#FFFFFF' : '#111111', pick: function () { self.setState({ color: k }); } };
+    });
+    return { chips: chips, items: items, count: String(items.length), countWord: items.length === 1 ? 'koffie' : 'koffies' };
+  }
+}
+</script>
+</body>
+</html>
