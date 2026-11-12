@@ -62,6 +62,14 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
 - Let op: Shopify zet wijzigingen uit de thema-editor terug op `main`. Doe dus altijd eerst `git pull`. Het wachtwoord staat in Webshop › Voorkeuren › Wachtwoordbeveiliging (die pagina laadt niet in de ingebouwde browser).
 - Tip ingebouwde browser: themapagina's van de admin zitten in een iframe van `online-store-web.shopifyapps.com` (toegang gegeven). Schermafbeeldingen verversen soms niet; controleer dan met scripts.
 
+- **Dekking van de huidige site (gecontroleerd 12/11):** rosscoffee.be draait op Symmetry 8 met de app "Section Store". 158 producten, 28 collecties, 26 pagina's, 2 blogs (± 100 artikels).
+  - Werkt al in ons thema: alle producttypes (koffie automatisch, de rest via Dawn in ROSS-stijl), collecties met filters, zoeken, winkelwagen, 404, blog en artikel, contactformulier, en paginatekst met video's, tabellen en oude Odoo-kolommen (getest met de echte inhoud van "Jura werking").
+  - Inhoud in de pagina zelf (verhuist mee): o.a. koffie-maken, capsules, koffie-abonnement, pure-tea, koffiezetapparaten, la-marzocco, jura-werking, faq-veelgestelde-vragen, ehbj, retourbeleid, privacy, contact.
+  - Inhoud in thema-secties van Symmetry/Section Store (verhuist NIET mee, opnieuw opbouwen in fase 3): over-ons, workshop, mobiele-koffiebar-barista-huren, koffie-op-t-werk, horeca, ambachtelijk-vers-geroosterde-koffie, faq, ambachtelijke-koffiebonen-of-vers-gemalen-koffie-kopen, shop-nu; productsjablonen van het proefpakket 15×250 g en de abonnementen (vergelijkingstabel, testimonials); collectie ROSS Academy. Erkend-ambachtsman is leeg.
+  - Apps en scripts om mee te nemen bij livegang: Judge.me (reviews: app-embed aanzetten en blok in de productpagina), Google Tag Manager GTM-NZ8JMZ4, GA4 G-TE52TSEVTP, Microsoft Clarity, cookiebanner.
+  - Menu: 10 hoofditems (Koffie, Over ons, Pure Tea, Toestellen, Cadeau, Workshop, Mobiele coffee bar, B2B, Contact, ROSS Academy); te veel voor één lijn in de Dawn-header, dus inkorten of groeperen.
+  - Data: "Koffie op het werk" (€0,00) en "De ultieme gids…" (geen foto) zijn digitale producten zonder type; nakijken of die zichtbaar moeten blijven.
+
 **Volgende stap: fase 3**: pagina's (Ons verhaal, Workshops, Mobiele koffiebar, Zakelijk, Contact), hoofdmenu en footermenu (nu nog "Catalog"/"Contact" van Shopify), nieuwsbrief en de lege links in de homesecties invullen.
 
 ## Wat nu te doen, in deze volgorde
