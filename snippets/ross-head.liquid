@@ -1,0 +1,28 @@
+{% comment %}
+  ROSS: extra stijl bovenop Dawn.
+  - Yellowtail (handschriftaccent) wordt zelf gehost; het zit niet in de fontbibliotheek van Shopify.
+  - De labelkleuren per regio staan als CSS-variabelen, zodat secties en kaarten ze kunnen gebruiken.
+{% endcomment %}
+{{ 'ross-yellowtail.woff2' | asset_url | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+{% style %}
+  @font-face {
+    font-family: 'Yellowtail';
+    src: url('{{ 'ross-yellowtail.woff2' | asset_url }}') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    --ross-black: #111111;
+    --ross-ink: #000000;
+    --ross-yellow: #F4C400;
+    --ross-red: #D3302B;
+    --ross-brown: #7B4B2A;
+    --ross-orange: #F07D1F;
+    --ross-purple: #B22A6E;
+    --ross-mustard: #CDAA21;
+    --ross-grey: #6E6E6E;
+    --ross-muted: #555555;
+  }
+{% endstyle %}
+{{ 'ross.css' | asset_url | stylesheet_tag }}

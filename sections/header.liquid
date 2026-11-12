@@ -205,7 +205,16 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          {%- comment -%} ROSS: logo uit de themabestanden zolang er geen logo is gekozen {%- endcomment -%}
+          <div class="header__heading-logo-wrapper">
+            <img
+              src="{{ 'ross-logo.jpg' | asset_url }}"
+              alt="{{ shop.name | escape }}"
+              width="{{ settings.logo_width }}"
+              height="{{ settings.logo_width | times: 245 | divided_by: 565 }}"
+              class="header__heading-logo motion-reduce"
+            >
+          </div>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
@@ -248,7 +257,16 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          {%- comment -%} ROSS: logo uit de themabestanden zolang er geen logo is gekozen {%- endcomment -%}
+          <div class="header__heading-logo-wrapper">
+            <img
+              src="{{ 'ross-logo.jpg' | asset_url }}"
+              alt="{{ shop.name | escape }}"
+              width="{{ settings.logo_width }}"
+              height="{{ settings.logo_width | times: 245 | divided_by: 565 }}"
+              class="header__heading-logo motion-reduce"
+            >
+          </div>
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}

@@ -1,0 +1,66 @@
+{%- comment -%}
+  Toont een gekozen afbeelding, of anders een standaardfoto uit de themabestanden.
+  Parameters:
+  - image: image_picker-waarde (mag leeg zijn)
+  - fallback: bestandsnaam in assets/, bv. 'ross-cupping.jpg'
+  - alt: alternatieve tekst als de afbeelding er zelf geen heeft
+  - class: css-klasse
+  - sizes: sizes-attribuut
+  - position: object-position, bv. '60% center'
+  - eager: true voor afbeeldingen boven de vouw
+{%- endcomment -%}
+{%- liquid
+  assign img_loading = 'lazy'
+  if eager
+    assign img_loading = 'eager'
+  endif
+  assign img_sizes = sizes | default: '100vw'
+  assign img_alt = alt | default: ''
+  assign img_style = ''
+  if position != blank
+    assign img_style = 'object-position: ' | append: position
+  endif
+-%}
+{%- if image != blank -%}
+  {%- assign img_alt = image.alt | default: img_alt -%}
+  {{
+    image
+    | image_url: width: 2400
+    | image_tag:
+      widths: '480, 750, 1000, 1400, 1800, 2400',
+      sizes: img_sizes,
+      loading: img_loading,
+      class: class,
+      alt: img_alt,
+      style: img_style
+  }}
+{%- elsif fallback != blank -%}
+  {%- liquid
+    case fallback
+      when 'ross-koffiebar-veldrit.jpg'
+        assign w = 1600
+        assign h = 778
+      when 'ross-wim-giesen-jutezak.jpg'
+        assign w = 1281
+        assign h = 1600
+      when 'ross-krat-levering.jpg'
+        assign w = 1335
+        assign h = 751
+      when 'ross-zakken-groep.webp'
+        assign w = 1000
+        assign h = 1000
+      else
+        assign w = 1600
+        assign h = 1067
+    endcase
+  -%}
+  <img
+    src="{{ fallback | asset_url }}"
+    alt="{{ img_alt | escape }}"
+    width="{{ w }}"
+    height="{{ h }}"
+    loading="{{ img_loading }}"
+    {% if class %}class="{{ class }}"{% endif %}
+    {% if position %}style="object-position: {{ position }}"{% endif %}
+  >
+{%- endif -%}

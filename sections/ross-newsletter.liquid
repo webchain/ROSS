@@ -1,0 +1,51 @@
+<section class="ross-newsletter color-{{ section.settings.color_scheme }}" aria-label="Nieuwsbrief">
+  <div class="page-width ross-newsletter__inner">
+    <div class="ross-newsletter__text">
+      <h2 class="ross-h2">{{ section.settings.heading | escape }}</h2>
+      {%- if section.settings.text != blank -%}
+        <div class="rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+    </div>
+    {%- form 'customer', id: 'RossNewsletter', class: 'ross-newsletter__form' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <label for="RossNewsletterEmail-{{ section.id }}">E-mailadres</label>
+      <div class="ross-newsletter__row">
+        <input
+          id="RossNewsletterEmail-{{ section.id }}"
+          type="email"
+          name="contact[email]"
+          value="{{ form.email }}"
+          autocomplete="email"
+          autocorrect="off"
+          autocapitalize="off"
+          placeholder="jij@voorbeeld.be"
+          required
+          {% if form.errors %}aria-invalid="true" aria-describedby="RossNewsletterError-{{ section.id }}"{% endif %}
+        >
+        <button type="submit" class="button">{{ section.settings.button_label | escape }}</button>
+      </div>
+      {%- if form.errors -%}
+        <p id="RossNewsletterError-{{ section.id }}" class="ross-newsletter__msg" role="alert">
+          {{- form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email -}}
+        </p>
+      {%- elsif form.posted_successfully? -%}
+        <p class="ross-newsletter__msg" role="status">Dank je! Je bent ingeschreven.</p>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ROSS · Nieuwsbrief",
+  "tag": "div",
+  "class": "section ross-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Titel", "default": "10% korting op je eerste bestelling" },
+    { "type": "richtext", "id": "text", "label": "Tekst", "default": "<p>Nieuwe oogsten, workshopdata en verhalen uit de branderij. Eén keer per maand, beloofd.</p>" },
+    { "type": "text", "id": "button_label", "label": "Knop", "default": "Inschrijven" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-5" }
+  ],
+  "presets": [{ "name": "ROSS · Nieuwsbrief" }]
+}
+{% endschema %}

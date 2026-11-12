@@ -1,0 +1,12 @@
+{%- comment -%}
+  ROSS-blok voor main-product. Parameters: product, block, section, collection
+{%- endcomment -%}
+{%- assign ross_notes = product.metafields.custom.smaaknotities.value | split: '|' -%}
+{%- if ross_notes.size > 0 -%}
+  <ul class="ross-pchips" role="list" aria-label="Smaaknotities" {{ block.shopify_attributes }}>
+    {%- for note in ross_notes -%}
+      {%- assign n = note | strip -%}
+      {%- if n != blank -%}<li>{{ n }}</li>{%- endif -%}
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

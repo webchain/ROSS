@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "main": {
+      "type": "ross-collection-coffee",
+      "settings": {
+        "heading": "Onze koffie",
+        "text": "<p>Twee huisblends en een wisselende selectie single origins. Allemaal 100% arabica, traag gebrand, en elk met een eigen nummer: het eerste voor filter, het tweede voor espresso.</p>",
+        "teaser_product": "proefpakket-specialty-coffee-5x250g",
+        "teaser_title": "Twijfel je? Proef ze alle vijf.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "keuze": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": false,
+        "fallback": "ross-cupping.jpg",
+        "image_alt": "Proeven tijdens een cuppingsessie",
+        "image_position": "center",
+        "script": "Nog steeds geen keuze?",
+        "heading": "Proef vijf kleuren in één pakket.",
+        "text": "<p>Vijf zakjes van 250 g, elk uit een andere regio. Zo weet je snel welke kleur bij je past.</p>",
+        "note": "",
+        "button_label_1": "Naar het proefpakket",
+        "button_link_1": "shopify://products/proefpakket-specialty-coffee-5x250g",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-3"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "keuze"
+  ]
+}

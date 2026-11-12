@@ -1,0 +1,112 @@
+{%- comment -%}
+  Koffiecollectie in de ROSS-stijl: titel, kleurchips en vinkjes die de kaarten
+  in de browser filteren (zonder herladen). ?kleur=rood in de url zet meteen een kleur aan.
+{%- endcomment -%}
+{%- liquid
+  assign colors = 'bruin,oranje,rood,paars,geel,grijs' | split: ','
+  assign present = ''
+  for product in collection.products
+    capture k
+      render 'ross-region-color', product: product, part: 'key'
+    endcapture
+    unless present contains k
+      assign present = present | append: k | append: ','
+    endunless
+  endfor
+-%}
+<section class="ross-coll color-{{ section.settings.color_scheme }}">
+  <div class="page-width ross-coll__head">
+    <div class="ross-coll__intro">
+      <nav class="ross-crumbs" aria-label="Kruimelpad">
+        <a href="{{ routes.root_url }}">Home</a> / <span aria-current="page">{{ collection.title }}</span>
+      </nav>
+      <h1 class="ross-coll__title">{{ section.settings.heading | default: collection.title | escape }}</h1>
+      {%- if section.settings.text != blank -%}
+        <div class="ross-lead rte">{{ section.settings.text }}</div>
+      {%- elsif collection.description != blank -%}
+        <div class="ross-lead rte">{{ collection.description | strip_html | truncatewords: 40 }}</div>
+      {%- endif -%}
+    </div>
+    {%- assign teaser = section.settings.teaser_product -%}
+    {%- if teaser != blank -%}
+      <a href="{{ teaser.url }}" class="ross-coll__teaser">
+        {%- render 'ross-image', image: section.settings.teaser_image, fallback: 'ross-zakken-groep.webp', alt: '', class: 'ross-coll__teaser-img', sizes: '96px' -%}
+        <span>
+          <strong>{{ section.settings.teaser_title | escape }}</strong>
+          <span>{{ teaser.title | truncatewords: 6 }} · {{ teaser.price_min | money }}</span>
+        </span>
+      </a>
+    {%- endif -%}
+  </div>
+
+  <ross-coffee-filter class="page-width ross-coll__filter" data-section="{{ section.id }}">
+    <div class="ross-chips" role="group" aria-label="Filter op kleur">
+      <button type="button" class="ross-chip" data-color="alle" aria-pressed="true">
+        <span class="ross-chip__swatch ross-chip__swatch--all" aria-hidden="true"></span>Alle kleuren
+      </button>
+      {%- for c in colors -%}
+        {%- if present contains c -%}
+          {%- case c -%}
+            {%- when 'bruin' -%}{%- assign label = 'Bruin · huisblends' -%}{%- assign hex = '#7B4B2A' -%}
+            {%- when 'oranje' -%}{%- assign label = 'Oranje · Afrika' -%}{%- assign hex = '#F07D1F' -%}
+            {%- when 'rood' -%}{%- assign label = 'Rood · Midden-Amerika' -%}{%- assign hex = '#D3302B' -%}
+            {%- when 'paars' -%}{%- assign label = 'Paars · Zuid-Amerika' -%}{%- assign hex = '#B22A6E' -%}
+            {%- when 'geel' -%}{%- assign label = 'Geel · Azië' -%}{%- assign hex = '#CDAA21' -%}
+            {%- when 'grijs' -%}{%- assign label = 'Grijs · cafeïnevrij' -%}{%- assign hex = '#6E6E6E' -%}
+          {%- endcase -%}
+          <button type="button" class="ross-chip" data-color="{{ c }}" aria-pressed="false">
+            <span class="ross-chip__swatch" style="background: {{ hex }}" aria-hidden="true"></span>{{ label }}
+          </button>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    <div class="ross-coll__bar">
+      <div class="ross-coll__checks">
+        <label><input type="checkbox" data-filter="espresso"> Voor espresso</label>
+        <label><input type="checkbox" data-filter="filter"> Voor filter</label>
+        <label><input type="checkbox" data-filter="ground"> Ook gemalen</label>
+      </div>
+      <p class="ross-coll__count" aria-live="polite">
+        <strong data-count>{{ collection.products_count }}</strong> <span data-count-word>{% if collection.products_count == 1 %}product{% else %}producten{% endif %}</span>
+      </p>
+    </div>
+
+    {%- paginate collection.products by 48 -%}
+      <ul class="ross-grid ross-coll__grid" role="list">
+        {%- for product in collection.products -%}
+          <li data-ross-item>
+            {%- if product.metafields.custom.koffienaam != blank -%}
+              {% render 'ross-coffee-card', product: product, heading_tag: 'h2' %}
+            {%- else -%}
+              {% render 'card-product', card_product: product, media_aspect_ratio: 'square', show_secondary_image: false, lazy_load: true %}
+            {%- endif -%}
+          </li>
+        {%- else -%}
+          <li><p class="ross-empty">Er staan nog geen producten in deze collectie.</p></li>
+        {%- endfor -%}
+      </ul>
+      <p class="ross-coll__none" hidden>Geen koffie met deze keuze. <button type="button" class="ross-coll__reset">Alles tonen</button></p>
+      {%- if paginate.pages > 1 -%}
+        {% render 'pagination', paginate: paginate %}
+      {%- endif -%}
+    {%- endpaginate -%}
+  </ross-coffee-filter>
+</section>
+
+<script src="{{ 'ross-coffee-filter.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "ROSS · Koffiecollectie",
+  "tag": "div",
+  "class": "section ross-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Titel", "default": "Onze koffie", "info": "Leeg = de naam van de collectie." },
+    { "type": "richtext", "id": "text", "label": "Intro", "default": "<p>Twee huisblends en een wisselende selectie single origins. Allemaal 100% arabica, traag gebrand, en elk met een eigen nummer: het eerste voor filter, het tweede voor espresso.</p>" },
+    { "type": "product", "id": "teaser_product", "label": "Product in het kadertje", "info": "Bv. het proefpakket." },
+    { "type": "text", "id": "teaser_title", "label": "Titel kadertje", "default": "Twijfel je? Proef ze alle vijf." },
+    { "type": "image_picker", "id": "teaser_image", "label": "Foto kadertje" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-1" }
+  ]
+}
+{% endschema %}

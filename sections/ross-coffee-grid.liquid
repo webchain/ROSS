@@ -1,0 +1,45 @@
+{%- assign collection = section.settings.collection -%}
+<section class="ross-coffee-grid color-{{ section.settings.color_scheme }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="page-width">
+    <div class="ross-section-head">
+      <h2 class="ross-h3">{{ section.settings.heading | escape }}</h2>
+      {%- if collection != blank and section.settings.link_label != blank -%}
+        <a href="{{ collection.url }}" class="ross-link">
+          {{- section.settings.link_label | replace: '[aantal]', collection.products_count | escape -}}
+        </a>
+      {%- endif -%}
+    </div>
+    {%- if collection != blank -%}
+      <ul class="ross-grid" role="list">
+        {%- for product in collection.products limit: section.settings.limit -%}
+          <li>
+            {%- if product.metafields.custom.koffienaam != blank -%}
+              {% render 'ross-coffee-card', product: product %}
+            {%- else -%}
+              {% render 'card-product', card_product: product, media_aspect_ratio: 'square', show_secondary_image: false, lazy_load: true %}
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <p class="ross-empty">Kies een collectie in de instellingen van deze sectie.</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ROSS · Koffiegrid",
+  "tag": "div",
+  "class": "section ross-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Titel", "default": "Deze week populair" },
+    { "type": "collection", "id": "collection", "label": "Collectie" },
+    { "type": "range", "id": "limit", "label": "Aantal producten", "min": 2, "max": 12, "step": 1, "default": 4 },
+    { "type": "text", "id": "link_label", "label": "Linktekst", "default": "Alle [aantal] koffies", "info": "[aantal] wordt het aantal producten in de collectie." },
+    { "type": "text", "id": "anchor", "label": "Anker-id", "default": "koffie" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-1" }
+  ],
+  "presets": [{ "name": "ROSS · Koffiegrid" }]
+}
+{% endschema %}

@@ -1,75 +1,333 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero": {
+      "type": "ross-hero",
+      "settings": {
+        "show_stripes": true,
+        "heading": "Melk en suiker?",
+        "script": "Mag. Hoeft niet.",
+        "text": "<p>Wim brandt elke boon traag en op lage temperatuur in onze branderij in Melsele. Het resultaat: koffie die je gewoon puur drinkt, omdat hij zo lekker is.</p>",
+        "button_label_1": "Shop onze koffie",
+        "button_link_1": "shopify://collections/koffie",
+        "button_label_2": "Proefpakket · €44,90",
+        "button_link_2": "shopify://products/proefpakket-specialty-coffee-5x250g",
+        "footnote": "",
+        "fallback": "ross-wim-probat-bonen.jpg",
+        "image_alt": "Wim laat vers gebrande bonen uit de Probat in de koeltrommel vallen",
+        "image_position": "60% center",
+        "caption": "Net uit de Probat. Vrijdag in jouw brievenbus.",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "usp": {
+      "type": "ross-usp",
+      "settings": {
+        "label": "Waarom ROSS",
+        "color_scheme": "scheme-3"
+      },
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "usp-0": {
+          "type": "usp",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "title": "Vers gebrand",
+            "text": "Kleine batches op Probat en Giesen"
           }
         },
-        "button": {
-          "type": "buttons",
+        "usp-1": {
+          "type": "usp",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "title": "100% arabica",
+            "text": "Specialty, cupscore 80+"
+          }
+        },
+        "usp-2": {
+          "type": "usp",
+          "settings": {
+            "title": "Vrijdag in je bus",
+            "text": "Je hoeft niet thuis te blijven"
+          }
+        },
+        "usp-3": {
+          "type": "usp",
+          "settings": {
+            "title": "Erkend ambachtsman",
+            "text": "Door FOD Economie, sinds 2020"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
-      ],
+        "usp-0",
+        "usp-1",
+        "usp-2",
+        "usp-3"
+      ]
+    },
+    "legend": {
+      "type": "ross-legend",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "script": "Elke regio, een eigen kleur",
+        "heading": "Welke kleur drink jij?",
+        "text": "<p>Op elk ROSS-label zie je meteen waar de koffie vandaan komt. Onthoud je kleur, en je vindt je favoriet zo terug: online, in de winkel en op het rek.</p>",
+        "collection_url": "shopify://collections/koffie",
+        "image_alt": "Vijf ROSS-koffiezakken naast elkaar, elk met een andere labelkleur",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "legend-0": {
+          "type": "color",
+          "settings": {
+            "name": "Bruin",
+            "color": "#7B4B2A",
+            "taste": "Huisblends Mercator en Reynaert",
+            "key": "bruin"
+          }
+        },
+        "legend-1": {
+          "type": "color",
+          "settings": {
+            "name": "Oranje",
+            "color": "#F07D1F",
+            "taste": "Afrika: fruitig en fris",
+            "key": "oranje"
+          }
+        },
+        "legend-2": {
+          "type": "color",
+          "settings": {
+            "name": "Rood",
+            "color": "#D3302B",
+            "taste": "Midden-Amerika: chocolade en balans",
+            "key": "rood"
+          }
+        },
+        "legend-3": {
+          "type": "color",
+          "settings": {
+            "name": "Paars",
+            "color": "#B22A6E",
+            "taste": "Zuid-Amerika: zoet en vol",
+            "key": "paars"
+          }
+        },
+        "legend-4": {
+          "type": "color",
+          "settings": {
+            "name": "Geel",
+            "color": "#CDAA21",
+            "taste": "Azië: kruidig en vol",
+            "key": "geel"
+          }
+        }
+      },
+      "block_order": [
+        "legend-0",
+        "legend-1",
+        "legend-2",
+        "legend-3",
+        "legend-4"
+      ]
+    },
+    "populair": {
+      "type": "ross-coffee-grid",
+      "settings": {
+        "heading": "Deze week populair",
+        "collection": "koffie",
+        "limit": 4,
+        "link_label": "Alle [aantal] koffies",
+        "anchor": "koffie",
+        "color_scheme": "scheme-1"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "verhaal": {
+      "type": "ross-story",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "fallback": "ross-wim-en-sabrina-branderij.jpg",
+        "image_alt": "Wim en Sabrina met een kop koffie voor hun brander",
+        "image_position": "30% center",
+        "script": "Wim & Sabrina",
+        "heading": "Het begon met één kop koffie op een terras in Tarbes.",
+        "text": "<p>In 2013 proefde Wim in de Pyreneeën een koffie die geen melk of suiker nodig had. Gebrand met groene bonen uit Antwerpen, nota bene. Terug thuis werd de hobbyruimte een branderij, en in 2015 rolde de eerste branding uit de trommel.</p>",
+        "link_label": "Lees ons verhaal",
+        "link": "",
+        "color_scheme": "scheme-3"
+      },
+      "blocks": {
+        "verhaal-0": {
+          "type": "stat",
+          "settings": {
+            "number": "2015",
+            "label": "Eerste branding"
+          }
+        },
+        "verhaal-1": {
+          "type": "stat",
+          "settings": {
+            "number": "2",
+            "label": "Branders: Probat en Giesen"
+          }
+        },
+        "verhaal-2": {
+          "type": "stat",
+          "settings": {
+            "number": "2020",
+            "label": "Erkend ambachtsman"
+          }
+        }
+      },
+      "block_order": [
+        "verhaal-0",
+        "verhaal-1",
+        "verhaal-2"
+      ]
+    },
+    "abo": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": false,
+        "fallback": "ross-krat-levering.jpg",
+        "image_alt": "Een kist vol verse ROSS-koffiezakjes, klaar om te leveren",
+        "image_position": "center",
+        "script": "Het koffie-abonnement",
+        "heading": "Vrijdag is koffiedag.",
+        "text": "<p>Elke week of om de twee weken verse koffie in je brievenbus. Kies voor één maand, drie, zes of een heel jaar. Ook leuk om cadeau te doen.</p>",
+        "note": "",
+        "button_label_1": "Start je abonnement",
+        "button_link_1": "shopify://collections/abonnementen",
+        "button_label_2": "Geef het cadeau",
+        "button_link_2": "shopify://collections/cadeaus",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "kaarten": {
+      "type": "ross-cards",
+      "settings": {
+        "script": "Kom erbij zitten",
+        "heading": "Straffe koffie? Nee: lékkere koffie.",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "kaarten-0": {
+          "type": "card",
+          "settings": {
+            "fallback": "ross-cupping.jpg",
+            "image_alt": "Proeven tijdens een cuppingsessie",
+            "image_position": "center",
+            "title": "Workshops in de branderij",
+            "text": "Cuppen, branden, latte art. Met 6 tot 12 mensen, ideaal met vrienden of collega's.",
+            "link": ""
+          }
+        },
+        "kaarten-1": {
+          "type": "card",
+          "settings": {
+            "fallback": "ross-wim-giesen-jutezak.jpg",
+            "image_alt": "Wim schept groene bonen uit een jutezak bij de Giesen-brander",
+            "image_position": "center 30%",
+            "title": "Van jutezak tot kop",
+            "text": "Rechtstreeks van familiale plantages, zoals die van koffieboer Quin in Honduras.",
+            "link": "shopify://products/specialty-coffee-honduras-quin"
+          }
+        },
+        "kaarten-2": {
+          "type": "card",
+          "settings": {
+            "fallback": "ross-kop-toog-branderij.jpg",
+            "image_alt": "Een zwarte ROSS-kop op de toog, met de branderij op de achtergrond",
+            "image_position": "center",
+            "title": "ROSS Academy",
+            "text": "Sabrina's gidsen om thuis koffie te zetten zoals een barista.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "kaarten-0",
+        "kaarten-1",
+        "kaarten-2"
+      ]
+    },
+    "koffiebar": {
+      "type": "ross-overlay",
+      "settings": {
+        "fallback": "ross-koffiebar-veldrit.jpg",
+        "image_alt": "De zwarte ROSS-koffiebar op een modderige veldrit, met een rij wachtende supporters",
+        "image_position": "center",
+        "script": "De mobiele koffiebar",
+        "heading": "Regen, modder, veldrit? Wij staan er.",
+        "text": "<p>Op je bedrijfsfeest, je trouw of aan de finish.</p>",
+        "button_label_1": "Boek de koffiebar",
+        "button_link_1": "",
+        "button_label_2": "ROSS & sport",
+        "button_link_2": "",
+        "color_scheme": "scheme-3"
+      }
+    },
+    "winkel": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": true,
+        "fallback": "ross-zakken-rek-winkel.jpg",
+        "image_alt": "ROSS-koffiezakken met rode en bruine labels op een houten rek in de winkel",
+        "image_position": "center",
+        "script": "Spring eens binnen",
+        "heading": "De winkel in Kruibeke",
+        "text": "<p>Proeven, advies over je toestel en een babbel met Sabrina. Je koffie afhalen kan ook in de branderij in Melsele.</p>",
+        "note": "<p>Edmond Gorrebeeckstraat 13, 9150 Kruibeke · <a href=\"https://maps.google.com/?q=Edmond+Gorrebeeckstraat+13+9150+Kruibeke\">Route</a></p>",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "winkel-0": {
+          "type": "row",
+          "settings": {
+            "label": "Woensdag",
+            "value": "8u – 12u30"
+          }
+        },
+        "winkel-1": {
+          "type": "row",
+          "settings": {
+            "label": "Zaterdag",
+            "value": "9u – 12u30"
+          }
+        },
+        "winkel-2": {
+          "type": "row",
+          "settings": {
+            "label": "Andere dagen",
+            "value": "Na afspraak: 0477 34 08 84"
+          }
+        }
+      },
+      "block_order": [
+        "winkel-0",
+        "winkel-1",
+        "winkel-2"
+      ]
+    },
+    "nieuwsbrief": {
+      "type": "ross-newsletter",
+      "settings": {
+        "heading": "10% korting op je eerste bestelling",
+        "text": "<p>Nieuwe oogsten, workshopdata en verhalen uit de branderij. Eén keer per maand, beloofd.</p>",
+        "button_label": "Inschrijven",
+        "color_scheme": "scheme-5"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero",
+    "usp",
+    "legend",
+    "populair",
+    "verhaal",
+    "abo",
+    "kaarten",
+    "koffiebar",
+    "winkel",
+    "nieuwsbrief"
   ]
 }

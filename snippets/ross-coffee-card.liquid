@@ -1,0 +1,98 @@
+{%- comment -%}
+  Gekleurde koffiekaart in de stijl van de ROSS-zakken.
+  Parameters:
+  - product: het product (met metafields custom.*)
+  - heading_tag: optioneel, standaard h3
+  - lazy: optioneel, standaard true
+{%- endcomment -%}
+{%- liquid
+  capture ross_bg
+    render 'ross-region-color', product: product
+  endcapture
+  capture ross_fg
+    render 'ross-region-color', product: product, part: 'text'
+  endcapture
+  capture ross_key
+    render 'ross-region-color', product: product, part: 'key'
+  endcapture
+  assign tag = heading_tag | default: 'h3'
+  assign name = product.metafields.custom.koffienaam.value | default: product.title
+  assign nr_f = product.metafields.custom.nummer_filter.value
+  assign nr_e = product.metafields.custom.nummer_espresso.value
+  assign notes = product.metafields.custom.smaaknotities.value | replace: ' | ', ', '
+  assign regio = product.metafields.custom.regio.value
+
+  assign has_espresso = false
+  assign has_filter = false
+  assign has_ground = false
+  for option in product.options_with_values
+    for value in option.values
+      assign v = value | downcase
+      if v == 'espresso'
+        assign has_espresso = true
+      elsif v == 'filter'
+        assign has_filter = true
+      elsif v == 'gemalen'
+        assign has_ground = true
+      endif
+    endfor
+  endfor
+  if nr_e != blank
+    assign has_espresso = true
+  endif
+  if nr_f != blank
+    assign has_filter = true
+  endif
+-%}
+<article
+  class="ross-coffee-card"
+  style="--ross-card-bg: {{ ross_bg }}; --ross-card-fg: {{ ross_fg }};"
+  data-ross-color="{{ ross_key }}"
+  data-espresso="{{ has_espresso }}"
+  data-filter="{{ has_filter }}"
+  data-ground="{{ has_ground }}"
+  data-decaf="{% if ross_key == 'grijs' %}true{% else %}false{% endif %}"
+>
+  <a href="{{ product.url }}" class="ross-coffee-card__media" tabindex="-1" aria-hidden="true">
+    {%- if product.featured_media -%}
+      {{
+        product.featured_media
+        | image_url: width: 900
+        | image_tag:
+          widths: '360, 540, 720, 900',
+          sizes: '(min-width: 990px) 25vw, (min-width: 750px) 50vw, 100vw',
+          loading: 'lazy',
+          alt: ''
+      }}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'ross-coffee-card__placeholder' }}
+    {%- endif -%}
+  </a>
+  <div class="ross-coffee-card__body">
+    <div class="ross-coffee-card__top">
+      <{{ tag }} class="ross-coffee-card__name ross-script">
+        <a href="{{ product.url }}">{{ name }}</a>
+      </{{ tag }}>
+      {%- if nr_f != blank or nr_e != blank -%}
+        <span class="ross-coffee-card__nr" title="Filter {{ nr_f }} · espresso {{ nr_e }}">
+          {%- if nr_f != blank and nr_e != blank -%}{{ nr_f }}/{{ nr_e }}{%- else -%}{{ nr_f | default: nr_e }}{%- endif -%}
+        </span>
+      {%- endif -%}
+    </div>
+    {%- if regio != blank -%}
+      <span class="ross-coffee-card__origin">{{ regio }}</span>
+    {%- endif -%}
+    {%- if notes != blank -%}
+      <span class="ross-coffee-card__notes">{{ notes }}</span>
+    {%- endif -%}
+    <div class="ross-coffee-card__foot">
+      <span class="ross-coffee-card__price">
+        {%- if product.price_varies -%}vanaf {% endif -%}
+        {{- product.price_min | money -}}
+      </span>
+      <a href="{{ product.url }}" class="ross-coffee-card__cta">
+        Kies<span class="visually-hidden"> {{ name }}</span>
+      </a>
+    </div>
+  </div>
+</article>

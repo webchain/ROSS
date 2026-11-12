@@ -1,0 +1,56 @@
+<section class="ross-cards color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    {%- if section.settings.script != blank -%}
+      <p class="ross-script ross-kicker">{{ section.settings.script | escape }}</p>
+    {%- endif -%}
+    <h2 class="ross-h2 ross-cards__heading">{{ section.settings.heading | escape }}</h2>
+    <ul class="ross-cards__grid" role="list">
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.link | default: '#' }}" class="ross-cards__card">
+            {%- render 'ross-image',
+              image: block.settings.image,
+              fallback: block.settings.fallback,
+              alt: block.settings.image_alt,
+              position: block.settings.image_position,
+              sizes: '(min-width: 990px) 33vw, 100vw',
+              class: 'ross-cards__img'
+            -%}
+            <strong>{{ block.settings.title | escape }}</strong>
+            <span>{{ block.settings.text | escape }}</span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ROSS · Fotokaarten",
+  "tag": "div",
+  "class": "section ross-section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "script", "label": "Handschriftregel", "default": "Kom erbij zitten" },
+    { "type": "text", "id": "heading", "label": "Titel", "default": "Straffe koffie? Nee: lékkere koffie." },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-1" }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Kaart",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Foto" },
+        { "type": "text", "id": "fallback", "label": "Standaardfoto (themabestand)", "default": "ross-cupping.jpg" },
+        { "type": "text", "id": "image_alt", "label": "Alt-tekst foto", "default": "Proeven tijdens een cuppingsessie" },
+        { "type": "text", "id": "image_position", "label": "Focuspunt foto", "default": "center" },
+        { "type": "text", "id": "title", "label": "Titel", "default": "Workshops in de branderij" },
+        { "type": "text", "id": "text", "label": "Tekst", "default": "Cuppen, branden, latte art." },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "ROSS · Fotokaarten", "blocks": [{ "type": "card" }, { "type": "card" }, { "type": "card" }] }]
+}
+{% endschema %}

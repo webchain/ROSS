@@ -2,11 +2,11 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
+    "concept-bar": {
       "type": "announcement-bar",
       "settings": {
-        "color_scheme": "scheme-1",
-        "show_line_separator": true,
+        "color_scheme": "scheme-4",
+        "show_line_separator": false,
         "show_social": false,
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -14,40 +14,63 @@
         "enable_language_selector": false
       },
       "blocks": {
-        "announcement-bar-0": {
+        "concept": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "text_alignment": "center",
-            "color_scheme": "scheme-1",
+            "text": "Concept · ontwerpvoorstel, geen echte webshop",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "concept"
+      ]
+    },
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "show_line_separator": false,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      },
+      "blocks": {
+        "verzending": {
+          "type": "announcement",
+          "settings": {
+            "text": "Gratis verzending vanaf €75 in België en Nederland · Afhalen in Kruibeke of Melsele",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "verzending"
       ]
     },
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "scheme-1",
-        "menu_color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
+        "menu_color_scheme": "scheme-2",
         "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "mobile_logo_position": "center",
+        "show_line_separator": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "left",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     }
   },
   "order": [
+    "concept-bar",
     "announcement-bar",
     "header"
   ]

@@ -1,0 +1,61 @@
+{%- comment -%}
+  Geeft de labelkleur van een koffie terug (hex), of de tekstkleur die erop past.
+  Gebruik:
+    {%- capture bg -%}{% render 'ross-region-color', product: product %}{%- endcapture -%}
+    {%- capture fg -%}{% render 'ross-region-color', product: product, part: 'text' %}{%- endcapture -%}
+  Volgorde: metafield custom.labelkleur, anders custom.regio, anders zwart.
+  De kleuren volgen de koffiezakken: rood = Midden-Amerika, paars = Zuid-Amerika.
+{%- endcomment -%}
+{%- liquid
+  assign ross_hex = ''
+  if product.metafields.custom.labelkleur != blank
+    assign ross_hex = product.metafields.custom.labelkleur.value | append: ''
+  endif
+  if ross_hex == ''
+    assign ross_regio = product.metafields.custom.regio.value | downcase
+    case ross_regio
+      when 'huisblend'
+        assign ross_hex = '#7B4B2A'
+      when 'afrika'
+        assign ross_hex = '#F07D1F'
+      when 'midden-amerika'
+        assign ross_hex = '#D3302B'
+      when 'zuid-amerika'
+        assign ross_hex = '#B22A6E'
+      when 'azië', 'azie'
+        assign ross_hex = '#CDAA21'
+      when 'cafeïnevrij', 'cafeinevrij'
+        assign ross_hex = '#6E6E6E'
+      else
+        assign ross_hex = '#111111'
+    endcase
+  endif
+  assign ross_hex = ross_hex | upcase
+
+  if part == 'text'
+    if ross_hex == '#F07D1F' or ross_hex == '#CDAA21'
+      echo '#111111'
+    else
+      echo '#FFFFFF'
+    endif
+  elsif part == 'key'
+    case ross_hex
+      when '#7B4B2A'
+        echo 'bruin'
+      when '#F07D1F'
+        echo 'oranje'
+      when '#D3302B'
+        echo 'rood'
+      when '#B22A6E'
+        echo 'paars'
+      when '#CDAA21'
+        echo 'geel'
+      when '#6E6E6E'
+        echo 'grijs'
+      else
+        echo 'zwart'
+    endcase
+  else
+    echo ross_hex
+  endif
+-%}

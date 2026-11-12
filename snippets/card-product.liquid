@@ -30,7 +30,10 @@
   {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
   {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {%- endunless -%}
-{%- if card_product and card_product != empty -%}
+{%- comment -%} ROSS: koffies met koffievelden krijgen de gekleurde koffiekaart {%- endcomment -%}
+{%- if card_product and card_product != empty and card_product.metafields.custom.koffienaam != blank -%}
+  {% render 'ross-coffee-card', product: card_product, lazy: lazy_load %}
+{%- elsif card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
     if card_product.featured_media and media_aspect_ratio == 'portrait'

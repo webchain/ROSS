@@ -1,0 +1,66 @@
+<section class="ross-hero color-{{ section.settings.color_scheme }}">
+  <div class="ross-hero__text">
+    {%- if section.settings.show_stripes -%}
+      <div class="ross-stripes" aria-hidden="true"><span></span><span></span><span></span></div>
+    {%- endif -%}
+    <h2 class="ross-hero__title">
+      {{- section.settings.heading | escape -}}
+      {%- if section.settings.script != blank -%}
+        <span class="ross-script ross-hero__script">{{ section.settings.script | escape }}</span>
+      {%- endif -%}
+    </h2>
+    {%- if section.settings.text != blank -%}
+      <div class="ross-hero__lead rte">{{ section.settings.text }}</div>
+    {%- endif -%}
+    <div class="ross-buttons">
+      {%- if section.settings.button_label_1 != blank -%}
+        <a href="{{ section.settings.button_link_1 | default: '#' }}" class="button">{{ section.settings.button_label_1 | escape }}</a>
+      {%- endif -%}
+      {%- if section.settings.button_label_2 != blank -%}
+        <a href="{{ section.settings.button_link_2 | default: '#' }}" class="button button--secondary">{{ section.settings.button_label_2 | escape }}</a>
+      {%- endif -%}
+    </div>
+    {%- if section.settings.footnote != blank -%}
+      <p class="ross-hero__footnote">{{ section.settings.footnote | escape }}</p>
+    {%- endif -%}
+  </div>
+  <div class="ross-hero__media">
+    {%- render 'ross-image',
+      image: section.settings.image,
+      fallback: section.settings.fallback,
+      alt: section.settings.image_alt,
+      position: section.settings.image_position,
+      sizes: '(min-width: 990px) 50vw, 100vw',
+      eager: true
+    -%}
+    {%- if section.settings.caption != blank -%}
+      <p class="ross-hero__caption">{{ section.settings.caption | escape }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ROSS · Hero",
+  "tag": "div",
+  "class": "section ross-section",
+  "settings": [
+    { "type": "checkbox", "id": "show_stripes", "label": "Toon de drie streepjes", "default": true },
+    { "type": "text", "id": "heading", "label": "Titel", "default": "Melk en suiker?" },
+    { "type": "text", "id": "script", "label": "Handschriftregel", "default": "Mag. Hoeft niet." },
+    { "type": "richtext", "id": "text", "label": "Tekst", "default": "<p>Wim brandt elke boon traag en op lage temperatuur in onze branderij in Melsele. Het resultaat: koffie die je gewoon puur drinkt, omdat hij zo lekker is.</p>" },
+    { "type": "text", "id": "button_label_1", "label": "Knop 1", "default": "Shop onze koffie" },
+    { "type": "url", "id": "button_link_1", "label": "Link knop 1" },
+    { "type": "text", "id": "button_label_2", "label": "Knop 2", "default": "Proefpakket" },
+    { "type": "url", "id": "button_link_2", "label": "Link knop 2" },
+    { "type": "text", "id": "footnote", "label": "Kleine regel onder de knoppen", "info": "Bv. een echte reviewscore, zodra die er is." },
+    { "type": "image_picker", "id": "image", "label": "Foto" },
+    { "type": "text", "id": "fallback", "label": "Standaardfoto (themabestand)", "default": "ross-wim-probat-bonen.jpg" },
+    { "type": "text", "id": "image_alt", "label": "Alt-tekst foto", "default": "Wim laat vers gebrande bonen uit de Probat in de koeltrommel vallen" },
+    { "type": "text", "id": "image_position", "label": "Focuspunt foto", "default": "60% center" },
+    { "type": "text", "id": "caption", "label": "Label op de foto", "default": "Net uit de Probat. Vrijdag in jouw brievenbus." },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-1" }
+  ],
+  "presets": [{ "name": "ROSS · Hero" }]
+}
+{% endschema %}

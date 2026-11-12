@@ -1,6 +1,20 @@
+{%- comment -%} ROSS: koffies krijgen hun labelkleur als achtergrond van de foto's {%- endcomment -%}
+{%- liquid
+  assign ross_is_coffee = false
+  if product.metafields.custom.koffienaam != blank
+    assign ross_is_coffee = true
+    capture ross_bg
+      render 'ross-region-color', product: product
+    endcapture
+    capture ross_fg
+      render 'ross-region-color', product: product, part: 'text'
+    endcapture
+  endif
+-%}
 <product-info
   id="MainProduct-{{ section.id }}"
-  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
+  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}{% if ross_is_coffee %} ross-product--coffee{% endif %}"
+  {% if ross_is_coffee %}style="--ross-card-bg: {{ ross_bg }}; --ross-card-fg: {{ ross_fg }};"{% endif %}
   data-section="{{ section.id }}"
   data-product-id="{{ product.id }}"
   data-update-url="true"
@@ -90,6 +104,12 @@
               {%- case block.type -%}
                 {%- when '@app' -%}
                   {% render block %}
+                {%- when 'ross_coffee_title' -%}
+                  {% render 'ross-product-title', product: product, block: block, section: section, collection: collection %}
+                {%- when 'ross_chips' -%}
+                  {% render 'ross-product-chips', product: product, block: block %}
+                {%- when 'ross_intro' -%}
+                  {% render 'ross-product-intro', product: product, block: block %}
                 {%- when 'text' -%}
                   <p
                     class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -758,6 +778,31 @@
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "ross_coffee_title",
+      "name": "ROSS · Naam en nummer",
+      "limit": 1,
+      "settings": [
+        { "type": "checkbox", "id": "show_crumbs", "label": "Toon kruimelpad", "default": true },
+        { "type": "paragraph", "content": "Toont custom.koffienaam, het nummer (wisselt tussen espresso en filter) en de regio." }
+      ]
+    },
+    {
+      "type": "ross_chips",
+      "name": "ROSS · Smaakchips",
+      "limit": 1,
+      "settings": [
+        { "type": "paragraph", "content": "Toont custom.smaaknotities, gescheiden door |." }
+      ]
+    },
+    {
+      "type": "ross_intro",
+      "name": "ROSS · Korte intro",
+      "limit": 1,
+      "settings": [
+        { "type": "paragraph", "content": "Toont de eerste alinea van custom.waarom." }
+      ]
     },
     {
       "type": "text",

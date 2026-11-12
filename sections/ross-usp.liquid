@@ -1,0 +1,39 @@
+<section class="ross-usp color-{{ section.settings.color_scheme }}" aria-label="{{ section.settings.label | escape }}">
+  <div class="page-width ross-usp__grid">
+    {%- for block in section.blocks -%}
+      <div class="ross-usp__item" {{ block.shopify_attributes }}>
+        <strong>{{ block.settings.title | escape }}</strong>
+        <span>{{ block.settings.text | escape }}</span>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ROSS · USP-balk",
+  "tag": "div",
+  "class": "section ross-section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "label", "label": "Naam voor schermlezers", "default": "Waarom ROSS" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-3" }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "Troef",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Titel", "default": "Vers gebrand" },
+        { "type": "text", "id": "text", "label": "Tekst", "default": "Kleine batches op Probat en Giesen" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ROSS · USP-balk",
+      "blocks": [{ "type": "usp" }, { "type": "usp" }, { "type": "usp" }, { "type": "usp" }]
+    }
+  ]
+}
+{% endschema %}

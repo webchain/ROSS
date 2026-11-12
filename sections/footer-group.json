@@ -4,21 +4,55 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "contact": {
+          "type": "text",
+          "settings": {
+            "heading": "ROSS coffee",
+            "subtext": "<p><a href=\"mailto:info@rosscoffee.be\">info@rosscoffee.be</a><br>0477 34 08 84<br>Edmond Gorrebeeckstraat 13, 9150 Kruibeke</p>"
+          }
+        },
+        "shop": {
+          "type": "text",
+          "settings": {
+            "heading": "Shop",
+            "subtext": "<p><a href=\"/collections/koffie\">Koffie</a><br><a href=\"/collections/proefpakketten\">Proefpakketten</a><br><a href=\"/collections/abonnementen\">Abonnementen</a><br><a href=\"/collections/thee\">Pure Tea</a><br><a href=\"/collections/toestellen\">Toestellen</a></p>"
+          }
+        },
+        "ross": {
+          "type": "text",
+          "settings": {
+            "heading": "ROSS",
+            "subtext": "<p>Ons verhaal<br>Workshops<br>Mobiele koffiebar<br>Zakelijk<br>ROSS &amp; sport</p>"
+          }
+        },
+        "hulp": {
+          "type": "text",
+          "settings": {
+            "heading": "Hulp",
+            "subtext": "<p>Veelgestelde vragen<br>Verzending en afhalen<br>Retourbeleid<br>Contact</p>"
+          }
+        }
+      },
+      "block_order": [
+        "contact",
+        "shop",
+        "ross",
+        "hulp"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "color_scheme": "scheme-2",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": true,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 48,
+        "padding_bottom": 32
       }
     }
   },

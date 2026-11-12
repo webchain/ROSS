@@ -1,0 +1,7 @@
+{%- comment -%}
+  ROSS-blok voor main-product. Parameters: product, block, section, collection
+{%- endcomment -%}
+{%- assign ross_intro = product.metafields.custom.waarom.value | newline_to_br | split: '<br />' | first | strip -%}
+{%- if ross_intro != blank -%}
+  <p class="ross-pintro" {{ block.shopify_attributes }}>{{ ross_intro }}</p>
+{%- endif -%}

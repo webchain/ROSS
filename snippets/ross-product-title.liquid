@@ -1,0 +1,61 @@
+{%- comment -%}
+  ROSS-blok voor main-product. Parameters: product, block, section, collection
+{%- endcomment -%}
+{%- liquid
+  assign ross_name = product.metafields.custom.koffienaam.value | default: product.title
+  assign ross_nr_f = product.metafields.custom.nummer_filter.value
+  assign ross_nr_e = product.metafields.custom.nummer_espresso.value
+  assign ross_first = ross_nr_e | default: ross_nr_f
+  assign ross_regio = product.metafields.custom.regio.value
+-%}
+<div class="ross-ptitle" {{ block.shopify_attributes }}>
+  {%- if block.settings.show_crumbs -%}
+    <nav class="ross-crumbs" aria-label="Kruimelpad">
+      <a href="{{ routes.root_url }}">Home</a>
+      {%- if collection -%} / <a href="{{ collection.url }}">{{ collection.title }}</a>{%- endif -%}
+      / <span aria-current="page">{{ ross_name }}</span>
+    </nav>
+  {%- endif -%}
+  <div class="ross-ptitle__row">
+    <h1 class="ross-ptitle__name ross-script">{{ ross_name }}</h1>
+    {%- if ross_first != blank -%}
+      <span
+        class="ross-ptitle__nr"
+        data-ross-nr
+        data-espresso="{{ ross_nr_e }}"
+        data-filter="{{ ross_nr_f }}"
+        aria-label="Nummer {{ ross_first }}"
+      >{{ ross_first }}</span>
+    {%- endif -%}
+  </div>
+  {%- if ross_regio != blank -%}
+    <p class="ross-ptitle__origin">{{ ross_regio }}</p>
+  {%- endif -%}
+  {%- if ross_nr_f != blank and ross_nr_e != blank -%}
+    <p class="ross-ptitle__hint">{{ ross_nr_f }} voor filter, {{ ross_nr_e }} voor espresso</p>
+  {%- endif -%}
+</div>
+{%- if ross_nr_f != blank and ross_nr_e != blank -%}
+  <script>
+    (function () {
+      var root = document.getElementById('MainProduct-{{ section.id }}');
+      if (!root) return;
+      function update() {
+        var nr = root.querySelector('[data-ross-nr]');
+        if (!nr) return;
+        var checked = Array.prototype.map.call(
+          root.querySelectorAll('variant-selects input:checked, variant-selects select'),
+          function (el) { return (el.value || '').toLowerCase(); }
+        );
+        var value = checked.indexOf('filter') > -1 ? nr.dataset.filter : nr.dataset.espresso;
+        nr.textContent = value;
+        nr.setAttribute('aria-label', 'Nummer ' + value);
+      }
+      root.addEventListener('change', function (e) {
+        if (e.target.closest('variant-selects')) setTimeout(update, 0);
+      });
+      document.addEventListener('DOMContentLoaded', update);
+      update();
+    })();
+  </script>
+{%- endif -%}
