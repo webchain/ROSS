@@ -105,11 +105,11 @@
                 {%- when '@app' -%}
                   {% render block %}
                 {%- when 'ross_coffee_title' -%}
-                  {% render 'ross-product-title', product: product, block: block, section: section, collection: collection %}
+                  {%- if ross_is_coffee -%}{% render 'ross-product-title', product: product, block: block, section: section, collection: collection %}{%- endif -%}
                 {%- when 'ross_chips' -%}
-                  {% render 'ross-product-chips', product: product, block: block %}
+                  {%- if ross_is_coffee -%}{% render 'ross-product-chips', product: product, block: block %}{%- endif -%}
                 {%- when 'ross_intro' -%}
-                  {% render 'ross-product-intro', product: product, block: block %}
+                  {%- if ross_is_coffee -%}{% render 'ross-product-intro', product: product, block: block %}{%- endif -%}
                 {%- when 'text' -%}
                   <p
                     class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -118,6 +118,7 @@
                     {{- block.settings.text -}}
                   </p>
                 {%- when 'title' -%}
+                  {%- if ross_is_coffee -%}{%- continue -%}{%- endif -%}
                   <div class="product__title" {{ block.shopify_attributes }}>
                     <h1>{{ product.title | escape }}</h1>
                     <a href="{{ product.url }}" class="product__title">
@@ -213,6 +214,7 @@
                     {%- endif -%}
                   </p>
                 {%- when 'description' -%}
+                  {%- if ross_is_coffee -%}{%- continue -%}{%- endif -%}
                   {%- if product.description != blank -%}
                     <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                       {{ product.description }}
