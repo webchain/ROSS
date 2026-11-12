@@ -58,7 +58,11 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
   - Foto's van Wim, Sabrina, branderij enz. staan in `assets/ross-*.jpg` als standaardfoto van de secties; in de editor kan je ze vervangen.
   - Reviews en een reviewscore zijn weggelaten tot er echte reviews zijn (app). Na te vragen bij ROSS: 10% korting nieuwsbrief, gratis verzending vanaf €75, kleur rood/paars.
 
-**Volgende stap:** Jeroen koppelt de repo (Online Store › Thema's › Thema toevoegen › Verbinden via GitHub, webchain/ROSS, `main`). Daarna: winkeltaal op Nederlands, `collection.koffie` toewijzen, visueel nalopen in de preview. Let op: wijzigingen in de thema-editor commit Shopify terug naar `main`, dus altijd eerst `git pull`.
+- **Fase 2 afgewerkt (12/11):** repo gekoppeld als thema "ROSS/main" en gepubliceerd als actief thema. De winkel blijft achter het wachtwoord (gecontroleerd zonder inlogcookies: doorverwijzing naar `/password`). Winkeltaal staat op Nederlands. `collection.koffie` is toegewezen aan Koffie, Huisblends en Single origins. Gecontroleerd in de winkel, desktop en mobiel: geen overloop, kleurfilter werkt (`?kleur=oranje` = 7 koffies), nummer Mercator wisselt 50 → 10 bij Filter, prijzen zonder "EUR".
+- Let op: Shopify zet wijzigingen uit de thema-editor terug op `main`. Doe dus altijd eerst `git pull`. Het wachtwoord staat in Webshop › Voorkeuren › Wachtwoordbeveiliging (die pagina laadt niet in de ingebouwde browser).
+- Tip ingebouwde browser: themapagina's van de admin zitten in een iframe van `online-store-web.shopifyapps.com` (toegang gegeven). Schermafbeeldingen verversen soms niet; controleer dan met scripts.
+
+**Volgende stap: fase 3**: pagina's (Ons verhaal, Workshops, Mobiele koffiebar, Zakelijk, Contact), hoofdmenu en footermenu (nu nog "Catalog"/"Contact" van Shopify), nieuwsbrief en de lege links in de homesecties invullen.
 
 ## Wat nu te doen, in deze volgorde
 
@@ -81,7 +85,7 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
    Jeroen heeft al gevraagd om de definities op te slaan. Ze aanmaken en bewaren mag dus zonder extra akkoord.
 2. ✅ *Klaar.* **Jeroen importeert `doc/data/producten-import.csv`** via Producten › Importeren. Bestanden uploaden in de admin kan Claude niet. Controleer daarna een paar producten, bv. "10/50 Mercator": staan de metafields goed en zijn de varianten en foto's er?
 3. ✅ *Klaar.* **Automatische collecties aanmaken** volgens `doc/data/inrichting-winkel.md`: Koffie, Huisblends, Single origins, Proefpakketten, Abonnementen, Toestellen, Accessoires, Thee, Cadeaus en Lekkers. Vraag één keer akkoord voor het opslaan van de hele reeks.
-4. 🟡 *Eerste versie gepusht.* **Fase 2: het thema.** Haal Dawn op via GitHub (`Shopify/dawn`) en zet het in de root van de repo. Bouw het in de stijl van het v3-ontwerp; zie hieronder. Laat `shopify theme check` lopen als dat lukt. Push daarna. Jeroen koppelt de repo één keer via Online Store › Thema's › Thema toevoegen › Verbinden via GitHub (webchain/ROSS, branch `main`).
+4. ✅ *Klaar.* **Fase 2: het thema.** Haal Dawn op via GitHub (`Shopify/dawn`) en zet het in de root van de repo. Bouw het in de stijl van het v3-ontwerp; zie hieronder. Laat `shopify theme check` lopen als dat lukt. Push daarna. Jeroen koppelt de repo één keer via Online Store › Thema's › Thema toevoegen › Verbinden via GitHub (webchain/ROSS, branch `main`).
 5. **Fase 3:** pagina's (Ons verhaal, Workshops, Mobiele koffiebar, Zakelijk, Contact), menu, logo en nieuwsbrief. **Fase 4:** review. **Fase 5:** wachtwoord, preview-link en een rondleiding van één pagina voor ROSS die opent met de eigendomsboodschap.
 
 ## Ontwerprichting (v3, goedgekeurd door Jeroen)
@@ -104,4 +108,4 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
 
 ## Eerste actie in de nieuwe chat
 
-Stappen 1 tot 3 zijn klaar en het thema staat op `main`. Doe eerst `git pull`, kijk of Jeroen de repo koppelde en loop de preview na. Heb je de admin nodig, controleer dan of de ingebouwde browser ingelogd is in `admin.shopify.com/store/ross-demo-i7hrpkck`; zo niet, vraag Jeroen om in te loggen in de ingebouwde browser van de computer waaraan deze chat gekoppeld is.
+Fase 0 tot 2 zijn klaar. Doe eerst `git pull` en begin aan fase 3. Heb je de admin nodig, controleer dan of de ingebouwde browser ingelogd is in `admin.shopify.com/store/ross-demo-i7hrpkck`; zo niet, vraag Jeroen om in te loggen in de ingebouwde browser van de computer waaraan deze chat gekoppeld is.
