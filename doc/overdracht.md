@@ -70,6 +70,9 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
   - Menu: 10 hoofditems (Koffie, Over ons, Pure Tea, Toestellen, Cadeau, Workshop, Mobiele coffee bar, B2B, Contact, ROSS Academy); te veel voor één lijn in de Dawn-header, dus inkorten of groeperen.
   - Data: "Koffie op het werk" (€0,00) en "De ultieme gids…" (geen foto) zijn digitale producten zonder type; nakijken of die zichtbaar moeten blijven.
 
+- **Eindoverzicht voor Wim (fase 5):** Jeroen wil daarin naast de uitleg over het thema ook **alle suggesties** om de site verder te verbeteren. Die worden verzameld in `doc/suggesties-wim.md`; vul die lijst aan telkens er iets opvalt.
+- **Afspraak "Wim-klaar":** het thema moet in Wims winkel met een paar klikken werken (GitHub koppelen, bekijken, publiceren). Daarom: links naar zijn bestaande collectie-handles (`specialty-coffee-single-origins`, `specialty-coffee-blends`, `proefpakket-koffie`, `abonnementen`, `cadeau`, `koffietoestellen`), tracking in de themacode, en de Symmetry-pagina's opnieuw bouwen met dezelfde templatenamen als bij Wim. In zijn winkel blijven dan enkel de koffievelden (eenmalig) en het aanzetten van Judge.me over.
+
 **Volgende stap: fase 3**: pagina's (Ons verhaal, Workshops, Mobiele koffiebar, Zakelijk, Contact), hoofdmenu en footermenu (nu nog "Catalog"/"Contact" van Shopify), nieuwsbrief en de lege links in de homesecties invullen.
 
 ## Wat nu te doen, in deze volgorde
