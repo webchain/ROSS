@@ -1,0 +1,101 @@
+{
+  "sections": {
+    "intro": {
+      "type": "ross-hero",
+      "settings": {
+        "show_stripes": true,
+        "heading": "Koffie voor horeca",
+        "heading_tag": "h1",
+        "script": "Koffie die je gasten onthouden.",
+        "text": "<p>Ambachtelijk gebrande specialty coffee voor zaken die nét dat tikkeltje meer willen bieden. Zacht en gebalanceerd, zonder bittere nasmaak: de perfecte afsluiter van je menu.</p>",
+        "button_label_1": "Vraag een voorstel",
+        "button_link_1": "#ContactForm",
+        "button_label_2": "Bestel een proefpakket",
+        "button_link_2": "shopify://collections/proefpakket-koffie",
+        "footnote": "",
+        "fallback": "ross-kop-pralines.jpg",
+        "image_alt": "Een espresso met pralines en koffiebonen",
+        "image_position": "center",
+        "caption": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "troeven": {
+      "type": "ross-usp",
+      "settings": {
+        "label": "Waarom ROSS in je zaak",
+        "color_scheme": "scheme-3"
+      },
+      "blocks": {
+        "troeven-0": {
+          "type": "usp",
+          "settings": {
+            "title": "Vers gebrand",
+            "text": "Slow roasts van specialty-kwaliteit"
+          }
+        },
+        "troeven-1": {
+          "type": "usp",
+          "settings": {
+            "title": "Toestel erbij",
+            "text": "Volautomaat, halfautomaat of filter"
+          }
+        },
+        "troeven-2": {
+          "type": "usp",
+          "settings": {
+            "title": "Eigen label",
+            "text": "Je eigen naam op de zak kan"
+          }
+        },
+        "troeven-3": {
+          "type": "usp",
+          "settings": {
+            "title": "Geen gedoe",
+            "text": "Geen minimale afname, geen contract"
+          }
+        }
+      },
+      "block_order": [
+        "troeven-0",
+        "troeven-1",
+        "troeven-2",
+        "troeven-3"
+      ]
+    },
+    "corner": {
+      "type": "ross-split",
+      "settings": {
+        "image_right": true,
+        "fallback": "ross-cupping.jpg",
+        "image_alt": "Koffie proeven tijdens een cupping",
+        "image_position": "center",
+        "script": "Restaurant, lunchbar of hotel?",
+        "heading": "We komen graag langs.",
+        "text": "<p>Gastronomisch restaurant, lunchbar, boutique hotel of ontbijtzaak: we zoeken samen de koffie die bij je kaart past.</p><p>Eigen branding, een eigen label of speciale wensen? Mail naar <a href=\"mailto:sabrina@rosscoffee.be\">sabrina@rosscoffee.be</a>.</p>",
+        "note": "",
+        "button_label_1": "Bekijk de toestellen",
+        "button_link_1": "shopify://collections/koffietoestellen",
+        "button_label_2": "",
+        "button_link_2": "",
+        "color_scheme": "scheme-1"
+      }
+    },
+    "voorstel": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Vraag een voorstel voor je zaak",
+        "heading_size": "h2",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "troeven",
+    "corner",
+    "voorstel"
+  ]
+}
