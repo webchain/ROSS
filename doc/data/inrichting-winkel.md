@@ -9,8 +9,6 @@ Instellingen › Aangepaste gegevens › Producten › Definitie toevoegen. Name
 | Naam | Namespace en sleutel | Type |
 | --- | --- | --- |
 | Koffienaam | `custom.koffienaam` | Tekst met één regel |
-| Nummer filter | `custom.nummer_filter` | Geheel getal |
-| Nummer espresso | `custom.nummer_espresso` | Geheel getal |
 | Regio | `custom.regio` | Tekst met één regel |
 | Labelkleur | `custom.labelkleur` | Kleur |
 | Smaaknotities | `custom.smaaknotities` | Tekst met één regel (notities gescheiden door ` \| `) |

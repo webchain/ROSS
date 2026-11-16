@@ -40,8 +40,6 @@ LAND_REGIO = {
 # metafield: (kolomnaam, sleutel, type) — type staat in de definitielijst
 METAFIELDS = [
     ("Koffienaam", "koffienaam", "single_line_text_field"),
-    ("Nummer filter", "nummer_filter", "number_integer"),
-    ("Nummer espresso", "nummer_espresso", "number_integer"),
     ("Regio", "regio", "single_line_text_field"),
     ("Labelkleur", "labelkleur", "color"),
     ("Smaaknotities", "smaaknotities", "single_line_text_field"),
@@ -209,8 +207,6 @@ def koffievelden(p):
     waarom, tips = spatie(waarom), spatie(tips)
     return {
         "koffienaam": naam,
-        "nummer_filter": m.group(1) if m else "",
-        "nummer_espresso": m.group(2) if m else "",
         "regio": regio,
         "labelkleur": REGIO_KLEUR.get(regio, ""),
         "smaaknotities": " | ".join(noten),

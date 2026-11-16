@@ -472,12 +472,6 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
   color: inherit;
 }
 
-.ross-coffee-card__nr {
-  font-weight: 800;
-  font-size: 2.4rem;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
 
 .ross-coffee-card__origin {
   font-size: 1.2rem;
@@ -1038,12 +1032,6 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
   text-underline-offset: 0.6rem;
 }
 
-.ross-ptitle__nr {
-  font-weight: 800;
-  font-size: clamp(4rem, 4.4vw, 5.6rem);
-  line-height: 1;
-  letter-spacing: -0.03em;
-}
 
 .ross-ptitle__origin {
   margin: 1rem 0 0;
@@ -1053,11 +1041,6 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
   text-transform: uppercase;
 }
 
-.ross-ptitle__hint {
-  margin: 0.4rem 0 0;
-  font-size: 1.4rem;
-  color: var(--ross-muted);
-}
 
 .ross-pchips {
   list-style: none;
