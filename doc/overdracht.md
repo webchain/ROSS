@@ -43,7 +43,7 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
 
 - **Fase 0 (voorbereiden): klaar.** Partner-account (Datachain BV), ontwikkelwinkel "Ross_demo" (`admin.shopify.com/store/ross-demo-i7hrpkck`, plan Basic) en de GitHub-repo.
 - **Fase 1 (productdata): klaar.**
-  - 11 metafield-definities aangemaakt (namespace `custom`, Storefront API-toegang aan), sleutels zoals in de tabel hieronder.
+  - 11 metafield-definities aangemaakt (sinds 16/11 gebruikt het thema `nummer_filter` en `nummer_espresso` niet meer; ze staan nog in de demowinkel maar zijn uit de import en de inrichtingslijst gehaald) (namespace `custom`, Storefront API-toegang aan), sleutels zoals in de tabel hieronder.
   - Jeroen importeerde `producten-import.csv`: 155 producten. Gecontroleerd: 10/50 Mercator heeft alle 11 metafields, 12 varianten en 9 foto's; per metafield komt het aantal producten exact overeen met de CSV (koffienaam 20, oogst 18 …).
   - Winkelvaluta staat op EUR (Jeroen paste dat aan; stond op USD).
   - 10 automatische collecties aangemaakt: Koffie (25), Huisblends (4), Single origins (18), Proefpakketten (3), Abonnementen (5), Toestellen (75), Accessoires (13), Thee (26), Cadeaus (7: type Geschenken OF tag cadeau, als twee bronnen) en Lekkers (2). Handles volgen de titel (`koffie`, `single-origins` …).
@@ -53,7 +53,7 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
 
 - **Fase 2 (thema): eerste versie gepusht** naar `main` (Dawn 16.1.1 + ROSS-aanpassingen). Theme check: geen fouten, enkel de 9 waarschuwingen die Dawn zelf ook heeft.
   - Eigen secties (`sections/ross-*.liquid`): hero, USP-balk, kleurlegende, koffiegrid, verhaal, foto en tekst, fotokaarten, foto met kader, nieuwsbrief, koffiecollectie en "over de koffie".
-  - Koffies (producten met `custom.koffienaam`) krijgen automatisch de gekleurde kaart (ook in Dawn-rasters) en op de productpagina het koffie-ontwerp: gekleurd fotovlak, groot nummer dat wisselt met Toestel, smaakchips, uitklapblokken en "Ideaal voor". Andere producten blijven standaard Dawn. Er is dus geen aparte producttemplate nodig.
+  - Koffies (producten met `custom.koffienaam`) krijgen automatisch de gekleurde kaart (ook in Dawn-rasters) en op de productpagina het koffie-ontwerp: gekleurd fotovlak, smaakchips, uitklapblokken en "Ideaal voor". Andere producten blijven standaard Dawn. Er is dus geen aparte producttemplate nodig.
   - `collection.koffie` (kleurchips, vinkjes, `?kleur=rood` in de url) moet je in de admin toewijzen aan Koffie, Huisblends en Single origins.
   - Foto's van Wim, Sabrina, branderij enz. staan in `assets/ross-*.jpg` als standaardfoto van de secties; in de editor kan je ze vervangen.
   - Reviews en een reviewscore zijn weggelaten tot er echte reviews zijn (app). Na te vragen bij ROSS: 10% korting nieuwsbrief, gratis verzending vanaf €75, kleur rood/paars.
@@ -70,6 +70,11 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
   - Menu: 10 hoofditems (Koffie, Over ons, Pure Tea, Toestellen, Cadeau, Workshop, Mobiele coffee bar, B2B, Contact, ROSS Academy); te veel voor één lijn in de Dawn-header, dus inkorten of groeperen.
   - Data: "Koffie op het werk" (€0,00) en "De ultieme gids…" (geen foto) zijn digitale producten zonder type; nakijken of die zichtbaar moeten blijven.
 
+- **Aanpassingen 16/11 (op vraag van Jeroen):**
+  - **Geen koffienummer meer** (10/50, 20/60 …): weg van productpagina en koffiekaarten, ook geen thema-instelling meer. De producttitels van Wim bevatten het nummer nog; dat is zijn naam en blijft zo. Niet opnieuw invoeren.
+  - **B2B terug als hoofditem** (Kantoor → `koffie-op-t-werk`, Horeca → `horeca`), zoals op rosscoffee.be. Pagina Horeca aangemaakt met template `page.horeca` (zelfde templatenaam als bij Wim); "Koffie op 't werk" staat niet meer onder Beleef ROSS. Hoofdmenu nu: Koffie, Toestellen, Pure Tea, Cadeaus, Beleef ROSS (Workshops, Mobiele koffiebar), B2B (Kantoor, Horeca), Over ons, Contact.
+  - **Menu op één regel:** vanaf 1200px compactere menuletters, tussen 990 en 1199px het hamburgermenu. Gecontroleerd op 1129, 1200, 1400 en 375 px.
+  - Document voor Wim (doc): https://claude.ai/artifact/3fY4paKkgyLh5ZYR1xtqjf
 - **Eindoverzicht voor Wim (fase 5):** Jeroen wil daarin naast de uitleg over het thema ook **alle suggesties** om de site verder te verbeteren. Die worden verzameld in `doc/suggesties-wim.md`; vul die lijst aan telkens er iets opvalt.
 - **Afspraak "Wim-klaar":** het thema moet in Wims winkel met een paar klikken werken (GitHub koppelen, bekijken, publiceren). Daarom: links naar zijn bestaande collectie-handles (`specialty-coffee-single-origins`, `specialty-coffee-blends`, `proefpakket-koffie`, `abonnementen`, `cadeau`, `koffietoestellen`), tracking via apps/Klantgebeurtenissen (niet in de themacode), en de Symmetry-pagina's opnieuw bouwen met dezelfde templatenamen als bij Wim. In zijn winkel blijven dan enkel de koffievelden (eenmalig) en het aanzetten van Judge.me over.
 
@@ -88,8 +93,6 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
    | Naam | Sleutel | Type |
    | --- | --- | --- |
    | Koffienaam | `custom.koffienaam` | Tekst met één regel |
-   | Nummer filter | `custom.nummer_filter` | Geheel getal |
-   | Nummer espresso | `custom.nummer_espresso` | Geheel getal |
    | Regio | `custom.regio` | Tekst met één regel |
    | Labelkleur | `custom.labelkleur` | Kleur |
    | Smaaknotities | `custom.smaaknotities` | Tekst met één regel |
@@ -114,7 +117,7 @@ Commits eindigen met de attributieregels die de sessie opgeeft. Doe eerst `git f
 - **Toon:** speels en direct, bv. "Melk en suiker? Mag. Hoeft niet."
 - **Inspiratie:** illy en carantos.be.
 - **Pagina's in het canvas:** Home, HomeMobiel, Koffie (collectie met kleurfilter), Mercator (product), MercatorNu (product met enkel de data die er vandaag is; dat is de basis voor de demo) en Abo.
-- **Productpagina:** het nummer staat groot (espresso toont 50, filter 10), met de koffienaam, een gekleurd vlak volgens de regio, smaakchips, uitklapblokken met herkomst, verwerking, oogst en tips, en "Probeer ook eens" via Shopify-aanbevelingen.
+- **Productpagina:** de koffienaam, een gekleurd vlak volgens de regio, smaakchips, uitklapblokken met herkomst, verwerking, oogst en tips, en "Probeer ook eens" via Shopify-aanbevelingen.
 - **Voorlopig verborgen:** smaakmeter en zetadvies, tot Wim de waarden geeft. Abonnementen, reviews en workshopboekingen hebben een app nodig.
 
 ## Praktische beperkingen

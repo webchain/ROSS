@@ -5,17 +5,17 @@ Verzamellijst voor het eindoverzicht (fase 5). Jeroen wil dat het document voor 
 ## Overstap naar het nieuwe thema
 
 - **Koppelen via GitHub** in de eigen winkel: thema komt als concept binnen, eerst bekijken, dan publiceren. De huidige Symmetry-site blijft tot dan ongewijzigd.
-- **Koffievelden één keer invullen** (11 metafield-definities, waarden voor 20 koffies). Zonder die velden tonen koffies als gewone productpagina's; met de velden krijgen ze het kleurontwerp.
+- **Koffievelden één keer invullen** (9 metafield-definities, waarden voor 20 koffies; het koffienummer wordt bewust niet getoond). Zonder die velden tonen koffies als gewone productpagina's; met de velden krijgen ze het kleurontwerp.
 - **Template "koffie" kiezen** bij de koffiecollecties (Single origins, Blends).
 - **Judge.me in het nieuwe thema aanzetten** (app-embed in de thema-editor). Daarna kunnen sterren en echte reviews in het ontwerp.
 - **Meetcodes verhuizen vóór de themawissel**: Google Tag Manager (GTM-NZ8JMZ4), GA4 (G-TE52TSEVTP) en Microsoft Clarity zitten nu in de code van Symmetry en verdwijnen bij de wissel. Niet terug in de themacode zetten, maar via de app Google & YouTube (GA4), de Microsoft Clarity-app en eventueel een pixel bij Instellingen › Klantgebeurtenissen. Dan blijven ze werken bij elke volgende themawissel en volgen ze de cookietoestemming.
-- **Menu: een nieuw hoofdmenu naast het huidige.** Menu's zitten niet in het thema maar in de winkel, en alle thema's delen ze. Het huidige menu van Wim aanpassen verandert dus meteen ook de live Symmetry-site. Daarom in zijn winkel een tweede menu maken (bv. "Hoofdmenu nieuw", 7 items zoals in de demo) en dat in de thema-editor van het nieuwe thema kiezen bij Header › Menu. De afbeelding met tekst in het huidige uitklapmenu ("menu-promotion") is een blok van Symmetry zelf; die verdwijnt in het nieuwe thema, de links niet.
+- **Menu: een nieuw hoofdmenu naast het huidige.** Menu's zitten niet in het thema maar in de winkel, en alle thema's delen ze. Het huidige menu van Wim aanpassen verandert dus meteen ook de live Symmetry-site. Daarom in zijn winkel een tweede menu maken (bv. "Hoofdmenu nieuw", 8 items zoals in de demo) en dat in de thema-editor van het nieuwe thema kiezen bij Header › Menu. De afbeelding met tekst in het huidige uitklapmenu ("menu-promotion") is een blok van Symmetry zelf; die verdwijnt in het nieuwe thema, de links niet.
 - **Eigenaarschap van de code**: de repo staat nu bij Jeroen. Overdragen naar een GitHub-account van ROSS, of na publicatie de koppeling verbreken (Shopify houdt een kopie).
 
 ## Inhoud en structuur
 
 - **Pagina's die in thema-secties zitten opnieuw opbouwen** in het nieuwe thema (gebeurt in fase 3): Over ons, Workshop, Mobiele koffiebar, Koffie op 't werk, Horeca, FAQ, Shop nu en twee verhaalpagina's, plus de opbouw van het proefpakket 15×250 g, de abonnementen en de collectie ROSS Academy. Daarna kan de app **Section Store** weg.
-- **Menu inkorten**: nu 10 hoofditems. Voorstel: Koffie, Toestellen, Pure Tea, Cadeaus, Beleef ROSS (workshops, koffiebar, academy), Over ons. B2B en Contact naar de footer of het submenu.
+- **Menu inkorten**: nu 10 hoofditems, in de demo 8: Koffie, Toestellen, Pure Tea, Cadeaus, Beleef ROSS (workshops, mobiele koffiebar), B2B (kantoor, horeca), Over ons, Contact. B2B blijft bewust een hoofditem: leveren aan bedrijven en horeca is te belangrijk om weg te stoppen.
 - **Oude Odoo-opmaak in paginateksten opkuisen** (Jura werking, Koffie maken). Het nieuwe thema vangt ze op, maar propere tekst laadt sneller en is makkelijker te onderhouden.
 - **Dubbele blogartikels**: o.a. "Alles over koffie KVLV Kruibeke", "ROSS op Kanaal Z", "Halloween Mercoween" en "Koffietime" staan er twee keer. Eén versie houden en de andere doorverwijzen. De lege standaardblog "News" kan weg.
 - **Collecties opruimen**: 28 collecties, waarvan enkele alleen voor de sliders van het oude thema (homepage-slider-origins, home-slider-producten-toestellen, collectie-homepagina-2).
