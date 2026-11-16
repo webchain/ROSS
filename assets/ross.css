@@ -137,6 +137,41 @@ h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4 {
   color: var(--ross-yellow);
 }
 
+/* Menu met 8 hoofditems: vanaf 1200px iets compactere letters zodat alles op één regel past;
+   tussen 990 en 1199px het hamburgermenu, zoals op gsm. */
+@media screen and (min-width: 1200px) {
+  .header__inline-menu .header__menu-item {
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .header__inline-menu summary.header__menu-item {
+    padding-right: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+  .header .header__inline-menu {
+    display: none;
+  }
+
+  .header header-drawer {
+    display: block;
+  }
+
+  .overflow-hidden-tablet {
+    overflow: hidden;
+  }
+
+  .header--middle-left.header--has-menu {
+    grid-template-areas: 'navigation heading icons';
+    grid-template-columns: auto 1fr auto;
+    column-gap: 1rem;
+  }
+}
+
 .announcement-bar__message {
   font-size: 1.4rem;
   font-weight: 600;
