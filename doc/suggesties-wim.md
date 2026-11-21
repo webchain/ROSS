@@ -14,7 +14,8 @@ Verzamellijst voor het eindoverzicht (fase 5). Jeroen wil dat het document voor 
 
 ## Inhoud en structuur
 
-- **Pagina's die in thema-secties zitten opnieuw opbouwen** in het nieuwe thema (gebeurt in fase 3): Over ons, Workshop, Mobiele koffiebar, Koffie op 't werk, Horeca, FAQ, Shop nu en twee verhaalpagina's, plus de opbouw van het proefpakket 15×250 g, de abonnementen en de collectie ROSS Academy. Daarna kan de app **Section Store** weg.
+- **Pagina's die in thema-secties zitten opnieuw opbouwen** in het nieuwe thema (gebeurt in fase 3): Over ons, Workshop, Mobiele koffiebar, Koffie op 't werk, Horeca, FAQ, Shop nu en twee verhaalpagina's, plus de collectie ROSS Academy. Die gebruiken de eigen secties van Symmetry, niet Section Store.
+- **Section Store** (gecontroleerd 21/11) wordt enkel gebruikt voor twee secties op de abonnementen en het proefpakket 5×1 kg: een vergelijkingstabel (`ss_comparison_table_10`) en testimonials (`ss_testimonial_8`). De winkelwagen-lade is die van Symmetry zelf. Bouwen we die twee na in het nieuwe thema, dan kan de app weg. Of Wim ervoor betaalt (losse aankoop per sectie of Section Store Plus) moet hij zelf nakijken bij Apps.
 - **Menu inkorten**: nu 10 hoofditems, in de demo 8: Koffie, Toestellen, Pure Tea, Cadeaus, Beleef ROSS (workshops, mobiele koffiebar), B2B (kantoor, horeca), Over ons, Contact. B2B blijft bewust een hoofditem: leveren aan bedrijven en horeca is te belangrijk om weg te stoppen.
 - **Oude Odoo-opmaak in paginateksten opkuisen** (Jura werking, Koffie maken). Het nieuwe thema vangt ze op, maar propere tekst laadt sneller en is makkelijker te onderhouden.
 - **Dubbele blogartikels**: o.a. "Alles over koffie KVLV Kruibeke", "ROSS op Kanaal Z", "Halloween Mercoween" en "Koffietime" staan er twee keer. Eén versie houden en de andere doorverwijzen. De lege standaardblog "News" kan weg.
